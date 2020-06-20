@@ -24,9 +24,19 @@ body {
   }
   /*--- ---------- ---*/
 
+  /*--- background: neon lights ---*/
   .header {
     background-image: url('https://imgur.com/a/AtNGPM4.jpg');
     background-size: cover;
     background-position: center;
     position: relative;
+  }
+
+  .overlay {
+    position: absolute;
+    min-height: 100%;
+    min-width: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.6);
   }
