@@ -16,7 +16,7 @@
     integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <script src="main.js"></script>
 
-    <nav class="navbar navbar-default navbar-static-top">
+    <nav class="navbar navbar-expand-md">
         <a class="navbar-brand" href="#">Logo</a>
         <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#main-navigation">
         <span class="navbar-toggler-icon"></span>
@@ -29,9 +29,17 @@
             <li class="nav-item">
             <a class="nav-link" href="#">About</a>
             </li>
-            <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
-            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Dropdown
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+              </li>
         </ul>
         </div>
     </nav>
