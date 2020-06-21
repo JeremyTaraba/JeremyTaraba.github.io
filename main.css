@@ -26,11 +26,12 @@ body {
 
   /*--- background: neon lights ---*/
   .header {
-    background-image: url('https://i.imgur.com/RTcL027.jpg');
+    background-image: url('//i.imgur.com/RTcL027.jpg');
     background-size: cover;
     background-position: center;
     position: relative;
   }
+  /*--- ---------- ---*/
 
   .overlay {
     position: absolute;
