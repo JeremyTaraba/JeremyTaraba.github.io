@@ -49,8 +49,8 @@ body {
     transform: translate(-50%, -55%);
     text-align: center;
   }
-  .description h1 {
-    color: #6ab446;
+  .description h1 input{
+    color: #56a6f1;
   }
   .description p {
     color: #fff;
