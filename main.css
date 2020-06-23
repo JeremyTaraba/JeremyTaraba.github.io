@@ -21,6 +21,10 @@ body {
   .navbar-collapse {
     justify-content: flex-end;
   }
+  :target{
+    padding-top:70px; /* = to height of navbar */
+    margin-top:-70px;
+  }
   /*--- ---------- ---*/
 
   /*--- background: neon lights ---*/
@@ -70,7 +74,7 @@ body {
     text-transform: uppercase;
   }
 
-  .about-p {
+  .about p {
     color: #333;
     font-size: 1.3rem;
     margin-bottom: 20px;
