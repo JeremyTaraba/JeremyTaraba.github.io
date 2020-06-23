@@ -1,7 +1,7 @@
 body {
     padding: 0;
     margin: 0;
-    background-color: #c26868;
+    background-color: #862525;
   }
 
   /*--- navigation bar ---*/
@@ -121,10 +121,10 @@ body {
 
   .coursework ul{
     font-size: 1.3rem;
-    margin-bottom: 60px;
+    margin-bottom: 10px;
   }
   .skill {
-    border: 1px solid #50a9d1;
+    border: 1px solid #ffffff;
     margin-right: 10px;
     text-transform: uppercase;
     font-weight: 500;
@@ -132,7 +132,6 @@ body {
     display: inline-block;
     font-size: 11px;
     line-height: 1.33333em;
-    padding: 7px 18px;
-    margin-top: 0.8em;
     border-radius: 8px;
+    margin-bottom: 40px;
   }
