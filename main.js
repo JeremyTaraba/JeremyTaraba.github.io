@@ -1,11 +1,12 @@
-$(document).ready(function(){
-    $('.header').height($(window).height());
-  })
-
   // scroll functions
   $(document).ready(function () {
+
     var previousScroll = 0;
     $(window).scroll(function () {
+      if( $(window).scrollTop() >= 150){
+        showTopNav();
+      }
+      else{
       var currentScroll = $(this).scrollTop();
       if (currentScroll < 100) {
         showTopNav();
@@ -17,6 +18,7 @@ $(document).ready(function(){
         }
         previousScroll = currentScroll;
       }
+    }
     });
 
     function hideNav() {
