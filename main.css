@@ -9,9 +9,9 @@ body {
     opacity: 1;
     transition: opacity 0.4s ease-in-out;
     background:#12002f;
-    -webkit-box-shadow: 0 8px 6px -6px #999;
-    -moz-box-shadow: 0 8px 6px -6px #999;
-    box-shadow: 0 8px 6px -6px #999;
+    -webkit-box-shadow: 0 8px 6px -6px rgb(122, 135, 255);
+    -moz-box-shadow: 0 8px 6px -6px rgb(119, 127, 253);
+    box-shadow: 0 8px 6px -6px rgb(117, 142, 255);
     
   }
   .is-hidden {
