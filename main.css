@@ -71,14 +71,14 @@ body {
     color: #333;
     font-size: 1.3rem;
     font-weight: 700;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
     text-transform: uppercase;
   }
 
   .about p {
     color: #333;
     font-size: 1.3rem;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
   }
  
   .features {
