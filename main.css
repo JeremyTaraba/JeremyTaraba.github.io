@@ -12,7 +12,7 @@ body {
   .nav-link {
     color:#d86bfc;
   }
-  .navbar-brand{
+  .navbar-text{
     color:#ffffff;
   }
   .nav-link {
@@ -66,7 +66,7 @@ body {
 
   .about {
     margin: 0em auto;
-    padding: 1em;
+    padding: 3em;
     position: relative;
     background-color: #e6e8e6;
     box-sizing: border-box;
@@ -87,7 +87,7 @@ body {
  
   .features {
     margin: 0em auto;
-    padding: 1em;
+    padding: 3em;
     position: relative;
     background-color: #862525;
   }
@@ -123,7 +123,7 @@ body {
   }
   .coursework {
     margin: 0em auto;
-    padding: 1em;
+    padding: 3em;
     position: relative;
     background-color: #8d5a97;  
   }
