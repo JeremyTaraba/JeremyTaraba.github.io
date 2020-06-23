@@ -11,7 +11,6 @@ body {
   .nav-link,
   .navbar-brand {
     color: #fff;
-    cursor: pointer;
   }
   .nav-link {
     margin-right: 1em !important;
@@ -64,6 +63,14 @@ body {
     position: relative;
   }
   .about-title {
+    color: #333;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+
+  .about p {
     color: #333;
     font-size: 1.3rem;
     font-weight: 700;
