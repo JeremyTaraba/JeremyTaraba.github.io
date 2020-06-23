@@ -1,12 +1,7 @@
   // scroll functions
   $(document).ready(function () {
-
     var previousScroll = 0;
     $(window).scroll(function () {
-      if( $(window).scrollTop() >= 150){
-        showTopNav();
-      }
-      else{
       var currentScroll = $(this).scrollTop();
       if (currentScroll < 100) {
         showTopNav();
@@ -18,13 +13,12 @@
         }
         previousScroll = currentScroll;
       }
-    }
     });
-
+  
     function hideNav() {
       $(".navbar").removeClass("is-visible").addClass("is-hidden");
     }
-
+  
     function showNav() {
       $(".navbar").removeClass("is-hidden").addClass("is-visible").addClass("scrolling");
     }
