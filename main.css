@@ -68,6 +68,7 @@ body {
     margin: 4em auto;
     padding: 1em;
     position: relative;
+    background-color: #e6e8e6;
   }
   .about-title {
     color: #333;
@@ -87,6 +88,7 @@ body {
     margin: 4em auto;
     padding: 1em;
     position: relative;
+    background-color: #e75e4b;
   }
   .feature-title {
     color: #333;
@@ -118,7 +120,12 @@ body {
     color: #666;
     padding: 40px 0;
   }
-
+  .coursework {
+    margin: 4em auto;
+    padding: 1em;
+    position: relative;
+    background-color: #8d5a97;
+  }
   .coursework ul{
     font-size: 1.3rem;
     margin-bottom: 10px;
