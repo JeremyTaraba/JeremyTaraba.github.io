@@ -65,7 +65,7 @@ body {
   }
 
   .about {
-    margin: 4em auto;
+    margin: 0em auto;
     padding: 1em;
     position: relative;
     background-color: #e6e8e6;
@@ -86,7 +86,7 @@ body {
   }
  
   .features {
-    margin: 4em auto;
+    margin: 0em auto;
     padding: 1em;
     position: relative;
     background-color: #862525;
@@ -122,7 +122,7 @@ body {
     padding: 40px 0;
   }
   .coursework {
-    margin: 4em auto;
+    margin: 0em auto;
     padding: 1em;
     position: relative;
     background-color: #8d5a97;  
