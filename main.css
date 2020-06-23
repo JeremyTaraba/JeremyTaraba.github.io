@@ -7,12 +7,16 @@ body {
   /*--- navigation bar ---*/
   .navbar {
     opacity: 1;
-    transition: opacity 0.5s ease;
+    transition: opacity 0.4s ease-in-out;
     background:#12002f;
     -webkit-box-shadow: 0 8px 6px -6px #999;
     -moz-box-shadow: 0 8px 6px -6px #999;
     box-shadow: 0 8px 6px -6px #999;
     
+  }
+  .is-hidden {
+    opacity: 0;
+    transition: transform 0.4s, opacity 0.2s;
   }
   .navbar-hide {
     pointer-events: none;
