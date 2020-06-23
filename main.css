@@ -1,12 +1,12 @@
 body {
     padding: 0;
     margin: 0;
-    background-color: #6beeff;
+    background-color: #89bbe4;
   }
 
   /*--- navigation bar ---*/
   .navbar {
-    background:#6cc1e2;
+    background:#56a6f1;
   }
   .nav-link,
   .navbar-brand {
@@ -17,7 +17,7 @@ body {
     margin-right: 1em !important;
   }
   .nav-link:hover {
-    color: #d558e0;
+    color: #3e5ea1;
   }
   .navbar-collapse {
     justify-content: flex-end;
@@ -62,7 +62,6 @@ body {
     margin: 4em auto;
     padding: 1em;
     position: relative;
-    background-color: #99f0ff;
   }
   .about-title {
     color: #333;
