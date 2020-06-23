@@ -69,6 +69,7 @@ body {
     padding: 1em;
     position: relative;
     background-color: #e6e8e6;
+    box-sizing: border-box;
   }
   .about-title {
     color: #333;
@@ -88,7 +89,7 @@ body {
     margin: 4em auto;
     padding: 1em;
     position: relative;
-    background-color: #e75e4b;
+    background-color: #862525;
   }
   .feature-title {
     color: #333;
