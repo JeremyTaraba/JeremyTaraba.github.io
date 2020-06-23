@@ -1,7 +1,7 @@
 body {
     padding: 0;
     margin: 0;
-    background-color: #31a795;
+    background-color: #c26868;
   }
 
   /*--- navigation bar ---*/
@@ -11,7 +11,7 @@ body {
   }
   .nav-link,
   .navbar-brand {
-    color:#5e1477;
+    color:#ab2bd6;
   }
   .nav-link {
     margin-right: 1em !important;
@@ -54,10 +54,10 @@ body {
     text-align: center;
   }
   .description h1 {
-    color: #ffffff;
+    color: #4dff9d;
   }
   .description p {
-    color: rgb(209, 205, 205);
+    color: rgb(255, 255, 255);
     font-size: 1.3rem;
     line-height: 1.5;
   }
