@@ -72,10 +72,8 @@ body {
 
   .about-p {
     color: #333;
-    font-size: 1.7rem;
-    font-weight: 700;
+    font-size: 1.3rem;
     margin-bottom: 20px;
-    text-transform: uppercase;
   }
  
   .features {
@@ -109,5 +107,5 @@ body {
 
   .coursework ul{
     font-size: 1.3rem;
-    
+    margin-bottom: 60px;
   }
