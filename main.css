@@ -69,7 +69,6 @@ body {
     padding: 3em;
     position: relative;
     background-color: #e6e8e6;
-    box-sizing: border-box;
   }
   .about-title {
     color: #333;
