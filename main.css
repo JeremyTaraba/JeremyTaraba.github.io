@@ -6,9 +6,15 @@ body {
 
   /*--- navigation bar ---*/
   .navbar {
+    opacity: 1;
+    transition: opacity 0.5s ease;
     background:#12002f;
     
   }
+  .navbar-hide {
+    pointer-events: none;
+    opacity: 0;
+}
   .nav-link {
     color:#d86bfc;
   }
