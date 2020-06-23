@@ -9,9 +9,11 @@ body {
     background:#12002f;
     
   }
-  .nav-link,
-  .navbar-brand {
-    color:#ab2bd6;
+  .nav-link {
+    color:#d86bfc;
+  }
+  .navbar-brand{
+    color:#ffffff;
   }
   .nav-link {
     margin-right: 1em !important;
