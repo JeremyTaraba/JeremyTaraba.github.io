@@ -107,7 +107,7 @@ body {
     padding: 3em;
     position: relative;
   }
-  .features h3{
+  .project-title{
     color: #4dff9d;
     font-size: 1.3rem;
     font-weight: 700;
@@ -116,8 +116,8 @@ body {
   }
   .feature-title {
     color: #adadad;
-    font-size: 1.3rem;
-    font-weight: 700;
+    font-size: 1rem;
+    font-weight: 400;
     margin-bottom: 20px;
     text-transform: uppercase;
   }
