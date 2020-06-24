@@ -107,6 +107,13 @@ body {
     padding: 3em;
     position: relative;
   }
+  .features h1{
+    color: #dadada;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
   .feature-title {
     color: #4dff9d;
     font-size: 1.3rem;
@@ -149,7 +156,7 @@ body {
     color: #fff;
   }
   .skill {
-    border: 1px solid #0c0c0c;
+    border: 1px solid #4dff9d;
     margin-right: 10px;
     text-transform: uppercase;
     font-weight: 500;
@@ -161,4 +168,5 @@ body {
     margin-top: 0.8em;
     border-radius: 8px;
     margin-bottom: 40px;
+    color: #fff;
   }
