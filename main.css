@@ -134,7 +134,7 @@ body {
   }
 
   .page-footer {
-    background-color: #222;
+    background-color: rgb(26, 26, 26);
     color: #ccc;
     padding: 60px 0 30px;
   }
@@ -146,6 +146,13 @@ body {
     margin: 0em auto;
     padding: 3em;
     position: relative;
+  }
+  .coursework-title {
+    color: #d86bfc;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: uppercase;
   }
   .coursework ul{
     font-size: 1.3rem;
