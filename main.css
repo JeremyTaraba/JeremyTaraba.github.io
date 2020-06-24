@@ -29,10 +29,46 @@ body {
   .nav-link {
     color:#d86bfc;
   }
-  .navbar-text{
+
+  .navbar-text > *{
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typingAnim 5s steps(50);
+  }
+
+  .navbar-text > *::after{
+    content: ". .";
+    display: block;
+    position: absolute;
+    top: 1em;
+    left: .35em;
+  }
+  .navbar-text > *::before{
+    content: "";
+    position: absolute;
+    display: block;
+    top: 2.1em;
+    left: .25em;
+    width: 1em;
+    height: .1em;
+    border-radius: 100%;
+    background: #fff;
+    animation: typingSpeak .5s steps(2);
+    animation-iteration-count: 5;
+  }
+
+  @keyframes typingAnim{
+    from { width: 0 }
+    to { width: 100% }
+  }
+  @keyframes typingSpeak{
+    0% { width: 1em; height: .1em }
+    100% { width: 1em; height: .5em; }
+  }
+  /* .navbar-text{
     color:#ffffff;
     font-size: 1.3rem;
-  }
+  } */
   .nav-link {
     margin-right: 1em !important;
   }
