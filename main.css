@@ -96,10 +96,15 @@ body {
   }
 
   .about p {
-    color: #333;
     font-size: 1.3rem;
     margin-bottom: 0px;
     color: #fff;
+  }
+
+  .about p a{
+    font-size: 1.3rem;
+    margin-bottom: 0px;
+    color: rgb(248, 205, 63);
   }
  
   .features {
