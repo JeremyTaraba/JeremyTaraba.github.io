@@ -107,7 +107,7 @@ body {
     padding: 3em;
     position: relative;
   }
-  .feature h3{
+  .features h3{
     color: #4dff9d;
     font-size: 1.3rem;
     font-weight: 700;
@@ -154,9 +154,17 @@ body {
     margin-bottom: 20px;
     text-transform: uppercase;
   }
+
+  .coursework-skill {
+    color: #4dff9d;
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+  }
   .coursework ul{
     font-size: 1.3rem;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     color: #fff;
   }
   .skill {
