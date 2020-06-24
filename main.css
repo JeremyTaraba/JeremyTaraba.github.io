@@ -1,7 +1,7 @@
 body {
     padding: 0;
     margin: 0;
-    background-color: #070017;
+    background-color: rgb(3, 0, 8);
   }
 
   /*--- navigation bar ---*/
@@ -88,10 +88,10 @@ body {
     position: relative;
   }
   .about-title {
-    color: #d86bfc;
+    color: #4dff9d;
     font-size: 1.3rem;
     font-weight: 700;
-    margin-bottom: 0px;
+    margin-bottom: 20px;
     text-transform: uppercase;
   }
 
@@ -107,15 +107,15 @@ body {
     padding: 3em;
     position: relative;
   }
-  .features h1{
-    color: #d86bfc;
+  .features h3{
+    color: #4dff9d;
     font-size: 1.3rem;
     font-weight: 700;
     margin-bottom: 20px;
     text-transform: uppercase;
   }
   .feature-title {
-    color: #4dff9d;
+    color: #adadad;
     font-size: 1.3rem;
     font-weight: 700;
     margin-bottom: 20px;
@@ -148,7 +148,7 @@ body {
     position: relative;
   }
   .coursework-title {
-    color: #d86bfc;
+    color: #4dff9d;
     font-size: 1.3rem;
     font-weight: 700;
     margin-bottom: 20px;
