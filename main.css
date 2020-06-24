@@ -88,7 +88,7 @@ body {
     position: relative;
   }
   .about-title {
-    color: #333;
+    color: #4dff9d;
     font-size: 1.3rem;
     font-weight: 700;
     margin-bottom: 0px;
@@ -99,6 +99,7 @@ body {
     color: #333;
     font-size: 1.3rem;
     margin-bottom: 0px;
+    color: #fff;
   }
  
   .features {
@@ -107,7 +108,7 @@ body {
     position: relative;
   }
   .feature-title {
-    color: #333;
+    color: #4dff9d;
     font-size: 1.3rem;
     font-weight: 700;
     margin-bottom: 20px;
@@ -119,6 +120,7 @@ body {
     font-weight: 700;
     margin-bottom: 20px;
     text-transform: uppercase;
+    color: #fff;
   }
   .features img {
     -webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
@@ -144,6 +146,7 @@ body {
   .coursework ul{
     font-size: 1.3rem;
     margin-bottom: 10px;
+    color: #fff;
   }
   .skill {
     border: 1px solid #0c0c0c;
