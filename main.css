@@ -43,8 +43,8 @@ body {
     justify-content: flex-end;
   }
   :target{
-    padding-top:70px; /* = to height of navbar */
-    margin-top:-70px;
+    padding-top:150px; /* = to height of navbar */
+    margin-top:-150px;
   }
   /*--- ---------- ---*/
 
