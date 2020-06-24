@@ -78,10 +78,6 @@ body {
   .navbar-collapse {
     justify-content: flex-end;
   }
-  :target{
-    padding-top:70px; /* = to height of navbar */
-    margin-top:-70px;
-  }
   /*--- ---------- ---*/
 
   /*--- background: neon lights ---*/

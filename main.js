@@ -2,6 +2,13 @@ $(document).ready(function(){
     $('.header').height($(window).height());
   })
 
+  $('.nav-link').click(function(){    
+    var divId = $(this).attr('href');
+     $('html, body').animate({
+      scrollTop: $(divId).offset().top - 54
+    }, 100);
+  })
+
   // scroll functions
   $(document).ready(function () {
     var previousScroll = 0;
