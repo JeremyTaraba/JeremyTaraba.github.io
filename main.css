@@ -47,13 +47,11 @@ body {
 
   /*--- background: neon lights ---*/
   .header {
-    background-image: url('//i.imgur.com/RTcL027.jpg');
+    background-image: url('background.jpg');
     background-size: cover;
     background-position: center;
     position: relative;
   }
-  /*--- ---------- ---*/
-
   .overlay {
     position: absolute;
     min-height: 100%;
@@ -61,6 +59,57 @@ body {
     left: 0;
     top: 0;
     background: rgba(0, 0, 0, 0.6);
+  }
+  /*--- ---------- ---*/
+
+  p > a {
+    position: relative;
+    color: rgb(248, 205, 63);
+    text-decoration: none;
+  }
+  
+  p > a:hover {
+    color: rgb(248, 205, 63);
+  }
+  p > a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(248, 205, 63);
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out 0s;
+  }
+  p > a:hover::before {
+    visibility: visible;
+    transform: scaleX(1);
+  }
+
+  
+  .feature-title:after{
+    content: '';
+    position: absolute;
+    width: 0; 
+    height: 3px;
+    display: block;
+    margin-top: 2px;
+    right: 0;
+    background: #4dff9d;
+    transition: width .4s ease;
+    -webkit-transition: width .4s ease;
+  }
+
+  .feature-title:hover{
+    color: #d86bfc;
+  }
+   
+  .feature-title:hover:after{
+    width: 100%;
+    left: 0;
+    background: #4dff9d;
   }
 
   .description {
@@ -97,12 +146,6 @@ body {
     margin-bottom: 0px;
     color: #fff;
   }
-
-  .about p a{
-    font-size: 1.3rem;
-    margin-bottom: 0px;
-    color: rgb(248, 205, 63);
-  }
  
   .features {
     margin: 0em auto;
@@ -117,11 +160,11 @@ body {
     text-transform: uppercase;
   }
   .feature-title {
-    color: #cecece;
+    color: #ffffff;
     font-size: 1.3rem;
     font-weight: 700;
-    margin-bottom: 20px;
     text-transform: uppercase;
+    position: relative;
   }
   .features p{
     font-size: 1.3rem;
@@ -133,6 +176,7 @@ body {
     -moz-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
     box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
     margin-bottom: 16px;
+    margin-top: 20px;
   }
 
   .page-footer {
@@ -161,7 +205,7 @@ body {
     color: #4dff9d;
     font-size: 1.3rem;
     font-weight: 500;
-    margin-bottom: 5px;
+    margin-bottom: 20px;
     text-transform: uppercase;
   }
   .coursework ul{
@@ -169,18 +213,24 @@ body {
     margin-bottom: 20px;
     color: #fff;
   }
+  .project-box {
+    border: 2px solid #d86bfc;
+    display: inline-block;
+    border-radius: 8px;
+    padding: 7px 18px;
+  }
   .skill {
-    border: 1px solid #d86bfc;
+    border: 2px solid #d86bfc;
     margin-right: 10px;
     text-transform: uppercase;
     font-weight: 500;
     width: auto;
     display: inline-block;
-    font-size: 11px;
+    font-size: 1rem;
     line-height: 1.33333em;
     padding: 7px 18px;
-    margin-top: 0.8em;
+    margin-top: 0em;
     border-radius: 8px;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     color: #fff;
   }
