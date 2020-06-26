@@ -183,9 +183,12 @@ p > a:hover::before {
   margin-bottom: 16px;
   margin-top: 20px;
 }
-.features img:hover {
+.fadeimg:hover {
   cursor: pointer;
+  transition: ease-in-out 0.3s;
+  opacity: 0.82;
 }
+
 
 .page-footer {
   background-color: rgb(26, 26, 26);
