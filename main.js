@@ -2,6 +2,13 @@ $(document).ready(function(){
     $('.header').height($(window).height());
   })
 
+// modal click
+  $(function() {
+		$('.pop').on('click', function() {
+			$('.imagepreview').attr('src', $(this).find('img').attr('src'));
+			$('#imagemodal').modal('show');   
+		});		
+});
   
 
   // scroll functions
