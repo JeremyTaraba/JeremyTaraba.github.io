@@ -72,26 +72,56 @@
   </div>
     <div class="container-fluid features" id="projects">
         <h3>Projects:</h3>
+        <div class="modal fade" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">              
+              <div class="modal-body">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <img src="" class="imagepreview" style="width: 100%; " >
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="row justify-content-md-center">
           <div class="col-lg-4 col-md-4 col-sm-12">
             <div class="project-box">
             <a class="feature-title" style="text-decoration:none" href="https://drive.google.com/open?id=1yhQUjG8UPGmm7BxHoyuURRvKpivUWXFIWWqP6YENBlE" target="_blank">
             AVR Project
             </a>
-            <div class="pop">
-              <img src="AVRPinout.jpg" style="width: 500px; height: 250px; object-fit: cover;" class="img-fluid fadeimg" >
-            </div>
-          
-            <div class="modal fade" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-              <div class="modal-dialog">
-                <div class="modal-content">              
-                  <div class="modal-body">
-                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                    <img src="" class="imagepreview" style="width: 100%; height: auto;" >
+
+            <div id="carouselAVR" class="carousel slide" data-ride="carousel">
+              <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+              </ol>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="pop">
+                    <img src="AVRPinout.jpg" style="width: 500px; height: 250px; object-fit: cover;" class="img-fluid fadeimg" >
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="pop">
+                    <img src="AVRComplete.jpg" style="width: 500px; height: 250px; object-fit: cover;" class="img-fluid fadeimg">
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="pop">
+                    <img src="AVRConcept.jpg" style="width: 500px; height: 250px; object-fit: cover;" class="img-fluid fadeimg">
                   </div>
                 </div>
               </div>
+              <a class="carousel-control-prev" href="#carouselAVR" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#carouselAVR" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
             </div>
+         
             <p>
               Used a breadboard, microcontroller, and Atmel Studio 7. Experience with wiring and coding in C for a Dance Dance Revolution game projected onto an LCD.  
               </p>
@@ -102,20 +132,40 @@
             <a class="feature-title" style="text-decoration:none" href="https://github.com/jaeeee/Piggy-Bank" target="_blank">
             Money Managing Application
             </a>
-            <div class="pop">
-              <img src="MMAWelcome.jpg" style="width: 500px; height: 250px; object-fit: cover; object-position: 0px 0px;" class="img-fluid fadeimg">
-            </div>
-          
-            <div class="modal fade" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-              <div class="modal-dialog">
-                <div class="modal-content">              
-                  <div class="modal-body">
-                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                    <img src="" style="transform: scale(2);" class="imagepreview" style="width: 100%; height: auot;" >
+            
+            <div id="carouselMMA" class="carousel slide" data-ride="carousel">
+              <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+              </ol>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="pop">
+                    <img src="MMASignin.jpg" style="width: 500px; height: 250px; object-fit: cover; " class="img-fluid fadeimg">
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="pop">
+                    <img src="MMAWelcome.jpg" style="width: 500px; height: 250px; object-fit: cover;" class="img-fluid fadeimg">
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="pop">
+                    <img src="MMAAddExpense.jpg" style="width: 500px; height: 250px; object-fit: cover; object-position: 0px 0px;" class="img-fluid fadeimg">
                   </div>
                 </div>
               </div>
+              <a class="carousel-control-prev" href="#carouselMMA" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#carouselMMA" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
             </div>
+         
             <p>
               Worked in a team, following a Scrum development cycle. Used React and JS for graphs of spending history and budgeting. Used Firebase for user authentication and as a database.
             </p>
@@ -126,20 +176,42 @@
             <a class="feature-title" style="text-decoration:none" href="https://github.com/JeremyTaraba/libgdx/tree/cs182test/gdx" target="_blank">
             Open Source Testing
             </a>
-            <div class="pop">
-              <img src="OSourceTestSummary.jpg" style="width: 500px; height: 250px; object-fit: cover; object-position: 0px;" class="img-fluid fadeimg">
-            </div>
-          
-            <div class="modal fade" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-              <div class="modal-dialog">
-                <div class="modal-content">              
-                  <div class="modal-body">
-                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                      <img  src="" class="imagepreview" style="width: 100%; height:auto;">
+
+            <div id="carouselOSource" class="carousel slide" data-ride="carousel">
+              <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+              </ol>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="pop" style="width: auto; height: 100%; margin: 0 auto">
+                    <img src="OSourceTestSummary.jpg" style="width: 500px; height: 250px; object-fit: cover; object-position: 0px;" class="img-fluid fadeimg">
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="pop">
+                    <img src="OSourceTestMath.jpg" style="width: 500px; height: 250px; object-fit: cover;" class="img-fluid fadeimg">
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="pop">
+                    <img src="OSourceCode.jpg" style="width: 500px; height: 250px; object-fit: cover;" class="img-fluid fadeimg">
                   </div>
                 </div>
               </div>
+              <a class="carousel-control-prev" href="#carouselOSource" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#carouselOSource" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
             </div>
+            
+          
+            
             <p>
               Wrote tests in Java for Libgdx, which is an open source video game creation framework.  Used jacoco and PIT to find and update inefficient tests and increase code coverage.
             </p> 
@@ -147,6 +219,7 @@
           </div>
         </div> 
     </div>
+ 
     <div class="container-fluid coursework" id="coursework">
       <div class="row">
         <div class="w-50 mx-auto">
@@ -191,7 +264,7 @@
         <div class="footer-copyright text-center">
           <p>
             Designed and built by Jeremy Taraba <br>
-            Last Updated: 06/24/2020
+            Last Updated: 06/26/2020
           </p>
         </div>
       </footer>
