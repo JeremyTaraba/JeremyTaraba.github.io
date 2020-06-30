@@ -188,6 +188,40 @@ p > a:hover::before {
   transition: ease-in-out 0.3s;
   opacity: 0.82;
 }
+/* ----- Carousel ----- */
+.carousel-indicators li {
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  background-color: #d86bfc;
+  
+}
+.carousel-indicators .active{
+    background-color: #4dff9d;
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  height: 100px;
+  width: 100px;
+  background-size: 100%, 100%;
+  background-image: none;
+}
+
+.carousel-control-next-icon:after
+{
+  content: '>';
+  font-size: 55px;
+  font-weight: 700;
+  color: #d86bfc;
+}
+
+.carousel-control-prev-icon:after {
+  content: '<';
+  font-size: 55px;
+  font-weight: 700;
+  color: #d86bfc;
+}
+/* -------------- */
 
 .page-footer {
   background-color: rgb(26, 26, 26);
