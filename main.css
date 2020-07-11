@@ -52,7 +52,7 @@ html {
 
 /*--- background: neon lights ---*/
 .header {
-  background-image: url('background.jpg');
+  background-image: url('homepage_images/background.jpg');
   background-size: cover;
   background-position: center;
   position: relative;
@@ -281,3 +281,11 @@ p > a:hover::before {
   color: #fff;
 }
 
+/* ----- icons show on hover ------ */
+
+.edit_hover_class i{
+  color: black;
+}
+.edit_hover_class:hover i{
+ color: #9d3cbd;
+}
