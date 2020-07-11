@@ -1,6 +1,6 @@
 $(document).ready(function(){
     $('.header').height($(window).height());
-  })
+  });
 
 // modal click
   $(function() {
@@ -9,7 +9,6 @@ $(document).ready(function(){
 			$('#imagemodal').modal('show');   
 		});		
 });
-  
 
   // scroll functions
   $(document).ready(function () {
