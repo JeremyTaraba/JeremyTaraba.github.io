@@ -2,7 +2,20 @@ $(document).ready(function(){
     $('.header').height($(window).height());
   });
 
-// modal click
+$(".animated").addClass("delay-1s");
+
+var myVar;
+
+function myFunction() {
+  myVar = setTimeout(showPage, 1200);
+}
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
+};
+  
+// modal clicks
   $(function() {
 		$('.pop').on('click', function() {
 			$('.imagepreview').attr('src', $(this).find('img').attr('src'));
