@@ -144,7 +144,7 @@ p > a:hover::before {
 .about-title {
   color: #4dff9d;
   font-size: 1.3rem;
-  font-weight: 700;
+  font-weight: 600;
   margin-bottom: 20px;
   text-transform: uppercase;
 }
@@ -165,14 +165,14 @@ p > a:hover::before {
 .features h3{
   color: #4dff9d;
   font-size: 1.3rem;
-  font-weight: 700;
+  font-weight: 600;
   margin-bottom: 30px;
   text-transform: uppercase;
 }
 .feature-title {
   color: #ffffff;
   font-size: 1.3rem;
-  font-weight: 700;
+  font-weight: 600;
   text-transform: uppercase;
   position: relative;
 }
@@ -248,7 +248,7 @@ p > a:hover::before {
 .coursework-title {
   color: #4dff9d;
   font-size: 1.3rem;
-  font-weight: 700;
+  font-weight: 600;
   margin-bottom: 20px;
   text-transform: uppercase;
 }
@@ -256,7 +256,7 @@ p > a:hover::before {
 .coursework-skill {
   color: #4dff9d;
   font-size: 1.3rem;
-  font-weight: 500;
+  font-weight: 600;
   margin-bottom: 20px;
   text-transform: uppercase;
 }
@@ -289,6 +289,23 @@ p > a:hover::before {
   color: #fff;
 }
 
+#websites {
+  margin: 0em auto;
+  padding: 5em;
+  padding-left: 10em;
+  padding-right: 10em;
+}
+
+#websitePortfolio {
+ text-align: left;
+ color:  #fff;
+ font-weight: 500;
+}
+
+#website:hover {
+ transform: scale(1.2);
+}
+
 #FluentFamiliar {
   margin: 0em auto;
   padding: 5em;
@@ -296,7 +313,7 @@ p > a:hover::before {
   padding-bottom: 10em;
 }
 
-/* ----- icons show on hover ------ */
+/* ----- icons change color on hover ------ */
 
 .edit_hover_class i{
   color: black;
