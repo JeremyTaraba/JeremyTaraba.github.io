@@ -2,13 +2,18 @@ $(document).ready(function(){
     $('.header').height($(window).height());
   });
 
+
+  
 $(".animated").addClass("delay-1s");
 
+
+// loader
 var myVar;
 
 function myFunction() {
   myVar = setTimeout(showPage, 1200);
 }
+
 
 function showPage() {
   document.getElementById("loader").style.display = "none";
@@ -23,7 +28,7 @@ function showPage() {
 		});		
 });
 
-  // scroll functions
+  // scroll function for navbar
   $(document).ready(function () {
     var previousScroll = 0;
     $(window).scroll(function () {

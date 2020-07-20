@@ -1,0 +1,101 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: rgb(236, 236, 236);
+  }
+
+/* ---- Header ---- */
+.header {
+    background-image: url('resources/headerBackground.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+.overlay {
+    position: absolute;
+    min-height: 100%;
+    min-width: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.6);
+}
+  /*--- ---------- ---*/
+
+
+  /* ---- Nav Bar ---- */
+.navbar {
+    background: rgba(0, 0, 0, 0.3);;
+    -webkit-box-shadow: 0 8px 6px -6px #eee;
+    -moz-box-shadow: 0 8px 6px -6px #eee;
+    box-shadow: 0 8px 6px -6px #eee;
+}  
+
+.navbar-text {
+    color: white;
+    font-family: 'Lobster', cursive;
+    font-size: 1.3rem;
+    position: relative;
+    width: 100%;
+    left: 0;
+    text-align: right;
+}
+
+
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
+    color: rgb(255, 255, 255);
+    background-color: #337ab7;
+}
+
+.nav-link {
+    color:#ffffff;
+}
+
+.nav-link {
+    margin-left: auto !important;
+}
+
+.nav-link:hover {
+    color: #f0cd30;
+}
+.navbar-collapse {
+    justify-content: flex-end;
+}
+
+.edit_hover_class:hover p{
+    color: #2eb3ff;
+}
+
+    
+
+  /* --- ------ --- */
+
+
+
+
+.welcome {
+    left: 50%;
+    position: absolute;
+    top: 45%;
+    transform: translate(-50%, -55%);
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.welcome h1{
+    color: white;
+    font-size: 3.3rem;
+    font-weight: 300;  
+}
+
+.shopName {
+    font-size: 3rem;
+    font-weight: 300;
+    font-family: 'Lobster', cursive;
+}
+
+
+.page-footer {
+    background-color: rgb(26, 26, 26);
+    color: #ccc;
+    padding: 60px 0 30px;
+}
