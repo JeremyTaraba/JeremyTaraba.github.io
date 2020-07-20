@@ -135,10 +135,8 @@ p > a:hover::before {
 
 .about {
   margin: 0em auto;
-  padding: 5em;
-  padding-left: 10em;
-  padding-right: 10em;
-  margin-top: 5em;
+  padding: 3em;
+  margin-top: 7em;
   position: relative;
 }
 .about-title {
@@ -157,10 +155,9 @@ p > a:hover::before {
 
 .features {
   margin: 0em auto;
-  padding: 5em;
-  padding-left: 10em;
-  padding-right: 10em;
+  padding: 3em;
   position: relative;
+  margin-top: 7em;
 }
 .features h3{
   color: #4dff9d;
@@ -239,11 +236,9 @@ p > a:hover::before {
 }
 #coursework {
   margin: 0em auto;
-  margin-top: 3em;
-  padding: 5em;
-  padding-left: 10em;
-  padding-right: 5em;
+  padding: 3em;
   position: relative;
+  margin-top: 7em;
 }
 .coursework-title {
   color: #4dff9d;
@@ -291,9 +286,7 @@ p > a:hover::before {
 
 #websites {
   margin: 0em auto;
-  padding: 5em;
-  padding-left: 10em;
-  padding-right: 10em;
+  padding: 3em;
 }
 
 #websitePortfolio {
