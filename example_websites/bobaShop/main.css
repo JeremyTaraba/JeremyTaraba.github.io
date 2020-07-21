@@ -55,7 +55,7 @@ body {
 }
 
 .nav-link:hover {
-    color: #f0cd30;
+    color: #9b9b9b;
 }
 .navbar-collapse {
     justify-content: flex-end;
@@ -87,11 +87,12 @@ body {
     font-weight: 300;  
 }
 
-.shopName {
+.shopName{
     font-size: 3rem;
     font-weight: 300;
     font-family: 'Lobster', cursive;
 }
+
 
 
 .page-footer {
