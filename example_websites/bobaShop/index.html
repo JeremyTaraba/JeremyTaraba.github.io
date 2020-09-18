@@ -10,6 +10,8 @@
     <link rel="stylesheet" type="text/css" href="main.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" 
     integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- Favicon -->
     <link rel="icon" href="resources/teaFavicon.png">
@@ -75,6 +77,8 @@
   </nav>
 
 
+  
+
   <!-- Add a carousel of Boba drinks -->
 
   <!-- Add two rows of 3 panel pictures, one for Order Ahead on app, one for catering, one for shop ingredients, 
@@ -91,6 +95,68 @@
   </header>
 
   
+
+
+  
+
+
+  <div class="container Favorites">
+    <div class="row">
+      <div class="col-sm-4">
+        <h2>Our Favorites</h2>
+        <p>Some of our favorite and most popular drinks here at <i>Big Boba Boys</i> includes the signature <b>Royal Milk Tea</b>, 
+          the beautiful <b>Butterfly Pea Tea</b>, and the classic <b>Matcha Milk Tea</b></p>
+        </br>
+        <h3>Follow us on Social Media!</h3>
+        <ul class="nav flex-column">
+          <li><a href="https://www.instagram.com/" target="_blank">Instagram <i class="fa fa-instagram"></i></a></li>
+          <li><a href="https://www.facebook.com/" target="_blank">Facebook <i class="fa fa-facebook"></i></a></li>
+          <li><a href="https://www.twitter.com/" target="_blank">Twitter <i class="fa fa-twitter"></i></a></li>
+        </ul>
+        <hr class="hidden-sm hidden-md hidden-lg">
+      </div>
+
+      
+      <div class="col-sm-8">
+        <div class="row justify-content-md-center">
+          <div id="carouselAVR" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators" >
+              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="pop">
+                  <img src="resources/MilkTea.jpg" style="width: 350px; height: 100%; object-fit: cover;" class="img-fluid fadeimg" >
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="pop">
+                  <img src="resources/ButterflyTea.jpg" style="width: 350px; height: 100%; object-fit: cover;" class="img-fluid fadeimg">
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="pop">
+                  <img src="resources/MatchaTea.jpg" style="width: 350px; height: 100%; object-fit: cover;" class="img-fluid fadeimg">
+                </div>
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselAVR" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselAVR" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
 
   <footer class="page-footer">
     <div class="container-fluid">
