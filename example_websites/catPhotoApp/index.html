@@ -2,34 +2,58 @@
 <html lang="en">
 
 <head>
-
+    
+    
 </head>
+<style>
 
+    /* body {
+        
+    } */
+ 
+    .title {
+        font-weight: 20px;
+        font-size: 24px;
+    }
+
+    .listTitle {
+        font-size: 20px;
+        position: justify;
+    }
+
+    li {
+        font-size: 18px;
+    }
+
+
+
+
+</style>
 
 <body>
-    <h2>CatPhotoApp</h2>
+    <h2 class="title">CatPhotoApp</h2>
 
 
-    <a href="#"> <img src="resources/Cat.jpg" height="400px" width="460px" alt="a cute cat"></a>
+    <a href="#"> <img id="catPhoto"src="resources/Cat.jpg" height="400px" width="460px" alt="a cute cat"></a>
 
 
     <div>
-        <p>Things cats love:</p>
+        <p class="listTitle">Things cats love:</p>
         <ul>
             <li>cat nip</li>
             <li>laser pointers</li>
             <li>lasagna</li>
         </ul>
-        <p>Top 3 things cats hate:</p>
+        <p class="listTitle">Top 3 things cats hate:</p>
         <ol>
             <li>flea treament</li>
             <li>thunder</li>
             <li>other cats</li>
         </ol>
-
     </div>
     
-    <form action="https://freecatphotoapp.com/submit-cat-photo:">
+
+    <form action="https://freecatphotoapp.com/submit-cat-photo">
         <label>
             <input type="radio" name="indoor-outdoor" checked>Indoor
         </label>
@@ -51,12 +75,10 @@
          
         <br>
 
-        <input type="text" placeholder="cat photo URL" required>
+        <input type="text" placeholder="Cat Photo URL" required>
         <button type="submit">Submit</button>
 
     </form>
-
-
 
 
 
