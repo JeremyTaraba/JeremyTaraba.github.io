@@ -1,0 +1,134 @@
+
+
+h1 {
+    text-align: center;
+    padding-bottom: 80px;
+}
+
+#leftCard {
+    font-size: 20px;
+}
+
+#middleCard {
+    font-size: 20px;
+}
+
+.leftGradientCard {
+    border-radius: 20px;
+    width: 240px;
+    height: 400px;
+    margin: 20px;
+    background: linear-gradient(35deg, #aeffff, #fcbaba);
+}
+
+.middleGradientCard {
+    border-radius: 20px;
+    width: 240px;
+    height: 400px;
+    margin: 20px;
+    background: repeating-linear-gradient(
+        45deg,
+        yellow 0px,
+        yellow 40px,
+        black 40px,
+        black 80px
+    );
+}
+
+.fadeCircle{
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+    position: relative;
+    left: 0%;
+    border-radius: 30%;
+    background: radial-gradient(#fcf149, #fc7c49);
+    animation-name: fade;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes fade {
+    50% {
+        left: 30%;
+        opacity: 0;
+    }
+}
+
+.hoverCircle {
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+    border-radius: 50%;
+    background: linear-gradient(0deg, #FFFFFF, #0a68ff, #26282b);
+}
+
+.hoverCircle:hover {
+    animation-name: gradient-change;
+    animation-duration: 700ms;
+    animation-iteration-count: infinite;   
+}
+
+@keyframes gradient-change {
+    0% {
+        background: linear-gradient(0deg, #FFFFFF, #0a68ff, #26282b);
+    }
+    5%{
+        background: linear-gradient(18deg, #FFFFFF, #0a68ff, #26282b);
+    }
+    10%{
+        background: linear-gradient(36, #FFFFFF, #0a68ff, #26282b);
+    }
+    15%{
+        background: linear-gradient(54deg, #FFFFFF, #0a68ff, #26282b);
+    }
+    20%{
+        background: linear-gradient(72deg, #FFFFFF, #0a68ff, #26282b);
+    }
+    25%{
+        background: linear-gradient(90deg, #FFFFFF, #0a68ff, #26282b);
+    }
+    30%{
+        background: linear-gradient(108deg, #FFFFFF, #0a68ff, #26282b);
+    }
+    35%{
+        background: linear-gradient(126deg, #FFFFFF, #0a68ff, #26282b);
+    }
+    40%{
+        background: linear-gradient(144deg, #FFFFFF, #0a68ff, #26282b);
+    }
+    45%{
+        background: linear-gradient(162deg, #FFFFFF, #0a68ff, #26282b);
+    }
+    50%{
+        background: linear-gradient(180deg, #FFFFFF, #0a68ff, #26282b);
+    }
+    55%{
+        background: linear-gradient(198deg, #FFFFFF, #0a68ff, #26282b);
+    }
+    60%{
+        background: linear-gradient(216deg, #FFFFFF, #0a68ff, #26282b);
+    }
+    65%{
+        background: linear-gradient(234deg, #FFFFFF, #0a68ff, #26282b);
+    }
+    70%{
+        background: linear-gradient(252deg, #FFFFFF, #0a68ff, #26282b);
+    }
+    75%{
+        background: linear-gradient(270deg, #FFFFFF, #0a68ff, #26282b);
+    }
+    80%{
+        background: linear-gradient(288deg, #FFFFFF, #0a68ff, #26282b);
+    }
+    85%{
+        background: linear-gradient(306deg, #FFFFFF, #0a68ff, #26282b);
+    }
+    90%{
+        background: linear-gradient(324deg, #FFFFFF, #0a68ff, #26282b);
+    }
+    100% {
+        background: linear-gradient(342deg, #FFFFFF, #0a68ff, #26282b);
+
+    }
+}
