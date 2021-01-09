@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap');
+
+.main{
+    font-size: 16px;
+    color: black;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    display: grid;
+    font-weight: 100;
+    margin-top: 50px;
+    grid-template-areas: 
+    ". Title ."
+    ". Form ."
+    ;
+    margin-bottom: 50px;
+}
+
+html {
+    min-height:100%;
+    background-image: url(pikmin.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-size:cover;
+    box-shadow:inset 0 0 0 2000px rgba(18, 223, 241, 0.566);
+  }
+
+label {
+    display: block;
+}
+
+#main-title {
+    display: grid;
+    grid-area: Title;
+    grid-template-columns: auto-fit;
+    grid-template-rows: 2fr 2fr;
+   
+}
+
+#title {
+    font-size: 48px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    margin-top: 30px;
+    margin-bottom: 0;
+}
+
+#description {
+    font-size: 24px;
+    font-weight: 100;
+    color: black;
+    font-style: italic;
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+#survey {
+    border-radius: 25px;
+    display: grid;
+    grid-area: Form;
+    font-size: 18px;
+    font-weight: 100;
+    color: black;
+    text-align: left;
+    background:rgba(63, 142, 252, 0.822);
+    padding-bottom: 50px;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;;
+}
+
+#submit {
+    font-size: 20px;
+    background: rgb(255, 170, 60);
+    cursor: pointer;
+}
+
+#survey-form {
+    display: grid;
+    font-size: 18px;
+    align-items: center;
+    justify-content: center;
+}

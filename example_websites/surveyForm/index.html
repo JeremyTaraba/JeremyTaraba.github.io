@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Survey Form</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+     <!-- test script -->
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+</head>
+
+<body class="main">
+
+    <div id="main-title">
+        <h1 id="title">Generic Survey Form</h1>
+        <p id="description"><b>Thank you for taking the time to help us improve our platform</b></p>
+    </div>
+
+    <div id="survey">
+        <form id="survey-form">
+            <label for="name" id="name-label">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required> 
+            <br>
+
+            <label for="email" id="email-label">Email:</label>
+            <input type="email" id="email" placeholder="Enter your email" required>
+            <br>
+
+            <label for="number" id="number-label">Age (optional)</label>
+            <input type="number" id="number" placeholder="Enter your age" min="0" max="99">
+            <br>
+
+            <p>Would you recommend us to others?</p>
+            <label for="love">
+            <input type="radio" id="love" name="recommend" value="love">Yes, I love you guys</label><br>
+            <label for="alright">
+            <input type="radio" id="alright" name="recommend" value="alright">Yes, you guys are alright</label><br>
+            <label for="sorry">
+            <input type="radio" id="sorry" name="recommend" value="sorry">No, I'm sorry</label><br>
+            <label for="hate">
+            <input type="radio" id="hate" name="recommend" value="hate">NO! I HAD A HORRIBLE EXPERIENCE!</label>
+            <br>
+
+            <label for="dropdown">Which browser are you using right now?</label>
+            <select name="dropdown" id="dropdown">
+                <option value="Google Chrome">Google Chrome</option>
+                <option value="Firefox">Firefox</option>
+                <option value="Internet Explorer">Internet Explorer</option>
+                <option value="Safari">Safari</option>
+                <option value="Other">Other</option>
+            </select>
+            <br>
+
+            <p>What coding languages should I work on?</p>
+            <label for="language1">
+            <input type="checkbox" name="language1" id="C" value="C">C</label><br>
+            <label for="language2">
+            <input type="checkbox" name="language2" id="C++" value="C++">C++</label><br>
+            <label for="language3">
+            <input type="checkbox" name="language3" id="html" value="html">HTML</label><br>
+            <label for="language4">
+            <input type="checkbox" name="language4" id="Javascript" value="Javascript">Javascript</label> 
+            <br>
+
+            <label for="comments">Additional Comments (optional)</label>
+            <textarea id="comments" name="comment" rows="5" cols="33" placeholder="Enter comments here..."></textarea>
+
+
+            <br>
+            <input type="submit" id="submit" value="Submit">
+        </form>
+    </div>
+</body>
+
+</html>
