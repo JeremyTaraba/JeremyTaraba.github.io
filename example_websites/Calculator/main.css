@@ -1,0 +1,46 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: rgb(228, 228, 228);
+}
+
+.description{
+    margin-bottom: 1em;
+    padding-top: .5em;
+    padding-bottom: .5em;
+    background-color: rgb(100, 182, 248);
+    background-size: cover;
+    font-size: 2em;
+    text-align: center;
+    color: white;
+}
+
+table{
+    margin: 40px 40px 40px 40px;
+}
+
+.calcTitle{
+    margin-bottom: 10px;
+    font-size: 2em;
+    font-weight: 600;
+    text-align:center;
+    width: 210px;
+    color:rgb(39, 153, 247);
+    border: solid black 2px;
+    margin: 40px 40px 40px 130px;
+}
+
+input[type="button"]{
+    background-color:rgb(100, 182, 248);
+    color: black;
+    border: solid black 2px;
+    width:100%;
+    font-size: 2em;
+}
+
+input[type="text"]{
+    background-color:white;
+    border: solid black 2px;
+    width:100%;
+    font-size: 2em;
+}
