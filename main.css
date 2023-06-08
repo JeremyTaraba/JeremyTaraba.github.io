@@ -245,7 +245,7 @@ p > a:hover::before {
   color: #4dff9d;
   font-size: 1.3rem;
   font-weight: 600;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   text-transform: uppercase;
 }
 
@@ -253,7 +253,7 @@ p > a:hover::before {
   color: #4dff9d;
   font-size: 1.3rem;
   font-weight: 600;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   text-transform: uppercase;
 }
 .coursework ul{
@@ -311,7 +311,7 @@ p > a:hover::before {
 .resume{
   margin: 0em auto;
   padding: 3em;
-  margin-top: 7em;
+  margin-top: 3em;
   position: relative;
   color: #fff;
   font-size: 1.3em;

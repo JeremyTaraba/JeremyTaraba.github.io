@@ -53,3 +53,16 @@ function showPage() {
       $(".navbar").removeClass("is-hidden").addClass("is-visible").addClass("scrolling");
     }
 });
+
+//show more modals
+$(".project-box").hide();
+var count =  $(".project-box").length;
+
+var i = 1;
+$("button").on("click" , function() {
+    i = i + 5;    
+    $(".project-box:lt(" + i + ")").show();
+    if(i > count){
+        $("button").hide();
+    }
+});
