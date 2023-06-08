@@ -261,6 +261,7 @@ p > a:hover::before {
   margin-bottom: 20px;
   color: #fff;
 }
+
 .project-box {
   border: 2px solid #d86bfc;
   display: inline-block;
@@ -305,6 +306,23 @@ p > a:hover::before {
   padding: 5em;
   padding-left: 5em;
   padding-bottom: 10em;
+}
+
+.resume{
+  margin: 0em auto;
+  padding: 3em;
+  margin-top: 7em;
+  position: relative;
+  color: #fff;
+  font-size: 1.3em;
+}
+
+.resume-title{
+  color: #4dff9d;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-transform: uppercase;
 }
 
 /* ----- icons change color on hover ------ */
