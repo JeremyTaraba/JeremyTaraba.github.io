@@ -1,0 +1,44 @@
+h1,h2 {
+    text-align: center;
+}
+
+body{
+    background-color: rgb(200, 233, 245);
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+
+.small_center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 15%;
+}
+
+label {
+    font-weight: 600;
+    font-size: larger;
+}
+
+.btn {
+    border-radius: 30px;
+}
+
+input {
+    border-radius: 10px;
+}
+
+.datepicker {
+    width: 180px;
+    background-color: rgb(245, 245, 245);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
