@@ -13,9 +13,9 @@
   </head>
   <body>
     <h1>Weather</h1>
-    <form action="" >
+    <form id="weather-form" action="showWeather/index.html" method="POST">
       <div class="form-group">
-        <label style="text-align: center;" class="center" for="location">Enter Location:</label>
+        <label style="text-align: center;" class="center" for="input-datalist">Enter Location:</label>
         <input class="center" type="text" placeholder="Location" list="list-cities" id="input-datalist">
         <datalist id="list-cities">
           <!-- <option>London</option>
@@ -35,6 +35,7 @@
                 <i class="glyphicon glyphicon-calendar"></i> 
             </span> 
         </div> 
+        <input type='hidden'  id="redirectLink" value="showWeather/index.html" name='redirect_to' />
         <button class="small_center btn btn-primary" style="margin-top: 20px;" type="submit" id="location_form">Submit</button>
       </div>      
     </form>
