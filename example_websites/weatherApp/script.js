@@ -18,7 +18,7 @@ weatherForm = document.getElementById("weather-form");
 redirectLink = document.getElementById("redirectLink");
 
 temp = [];
-addCity("irvine")
+
 
 document.addEventListener('DOMContentLoaded', e => {
     $('#input-datalist').autocomplete(({source:temp}))
@@ -26,17 +26,38 @@ document.addEventListener('DOMContentLoaded', e => {
 
 
 city_name = ""
-url = `https://api.openweathermap.org/geo/1.0/direct?q=${city_name}&limit=5&appid=e0df3dbc9bda8f59a4d31245ef415996`
 
-locationInput.addEventListener("input" , event => {
+locationInput.addEventListener("input" , async event => {
     city_name = locationInput.value;
-    console.log(city_name);
-   
+    cityList.innerHTML = "";
+    url = `https://api.openweathermap.org/geo/1.0/direct?q=${city_name}&limit=5&appid=e0df3dbc9bda8f59a4d31245ef415996`
+    data = await getApiData(url);
+    var fullName = "";
+    for (var i = 0; i < data.length; i++) {
+        fullName += data[i]["name"];
+        fullName += ", ";
+        fullName += data[i]["country"];
+        fullName += ", ";
+        fullName += data[i]["state"];
+        addCity(fullName);
+        fullName = "";
+    }
+    
+
 })
+
+function getApiData(urlName){
+    return fetch(urlName)
+    .then(res => res.json())
+    .catch(err => { throw err });
+}
+
+
+
+
 
 weatherForm.addEventListener("submit" , event => {
     event.preventDefault();
-    console.log("pressed submit");  
     if(locationInput.value != ""){
         document.location.href="showWeather/index.html";
     }

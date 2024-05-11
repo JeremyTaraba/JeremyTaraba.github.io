@@ -10,7 +10,7 @@
 <body>
     <h1 class="center">Donation Details</h>
     <p>Thank you for your donation!</p>
-    <form method="post" >
+    <form id="donation-form" method="post" >
         <div class="int-box " >
             <div class="col ext-box padding-under">
                 <label for="name">Full Name:</label>
@@ -21,14 +21,15 @@
                 <input type="text" id="email" name="firstname" placeholder="Email Address..">
             </div>
             <div class="col ext-box padding-under">                
-                <label for="amount">Full Name:</label>
+                <label for="amount">Amount:</label>
                 <input type="text" id="amount" name="firstname" placeholder="Donation amount..">
             </div>
         </div>
         <div class="center"> 
-            <button type="submit" class="btn btn-primary" id="submitDonation">Submit</button>
+            <button  onclick="sendMail(); return false" type="submit" class="btn btn-primary" id="submitDonation">Submit</button>
         </div>
        
     </form>
+    <script src="script.js"></script>
 </body>
 </html>
