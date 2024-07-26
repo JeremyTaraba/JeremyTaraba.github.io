@@ -7,7 +7,10 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <form method="post" action="action_signup.php">
+    <nav class="topnav">
+        <a href="../landingPage/index.html">Home</a>
+    </nav>
+    <form  class="center" method="post" action="">
         <h2>Sign Up</h2>
         <div class="form-group">
             <label for="username">Username:</label>
@@ -25,8 +28,10 @@
             <label for="confirmPassword">Confirm Password:</label>
             <input type="password" id="confirmPassword" name="confirmPassword" required>
         </div>
+        <button id="signup_button"type="submit">Sign Up</button>
     </form>
     <p>Already have an account?<a href="../loginPage/index.html">Login Here</a></p>
-
+    <script type="module" src="script.js"></script>"
+    
 </body>
 </html>

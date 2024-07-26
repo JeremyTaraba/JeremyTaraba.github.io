@@ -4,7 +4,37 @@
 }
 
 body{
-    background-color: beige;
+    background-color: rgb(241, 222, 173);
+    text-align: center;
+}
+
+nav{
+    box-shadow: 5px 5px 2px grey;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    margin: 0 auto;
+
+}
+
+.topnav a {
+    float: left;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    font-size: 38px;
+    text-decoration: none;
+}
+
+.center {
+    text-align: center;
+}
+
+
+form {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .header {
@@ -13,13 +43,7 @@ body{
     padding-left: 20px;
 }
 
-.topnav a {
-    float: right;
-    color: aliceblue;
-    text-align: center;
-    padding: 14px 16px;
-    font-size: 38px;
-}
+
 
 .topnav a:hover {
    
