@@ -35,6 +35,7 @@ button.addEventListener("click", async () => {
             // Signed up 
                 const user = userCredential.user;
             // ...
+            window.location.href = "../gamePage/index.html";
             })
             .catch((error) => {
                 const errorCode = error.code;
