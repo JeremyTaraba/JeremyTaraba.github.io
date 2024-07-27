@@ -39,6 +39,7 @@ button.addEventListener("click", async () => {
             .catch((error) => {
                 const errorCode = error.code;
                 const errorMessage = error.message;
+                window.location.href = "../errorPage/index.html";
             // ..
         }); 
 })
