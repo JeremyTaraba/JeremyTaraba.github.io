@@ -43,6 +43,7 @@ button.addEventListener("click", async () => {
         }); 
 })
 
+console.log("test")
 
 function createUser(){
     email = document.getElementById("email")
