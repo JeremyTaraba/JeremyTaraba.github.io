@@ -25,7 +25,7 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth();
 
 
-button = document.getElementById("signup_button")
+var button = document.getElementById("signup_button")
 
 button.addEventListener("click", async () => {
     email = document.getElementById("email")
