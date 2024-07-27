@@ -40,5 +40,6 @@ createUserWithEmailAndPassword(auth, email, password)
  button.addEventListener("click", async () => {
     email = document.getElementById("email")
     password = document.getElementById("password")
-    createUserWithEmailAndPassword(auth, email, password); 
+    console.log(email, password)
+    createUserWithEmailAndPassword(auth, email.text, password.text); 
  })
