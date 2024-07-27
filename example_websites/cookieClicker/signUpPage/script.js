@@ -30,8 +30,7 @@ var button = document.getElementById("signup_button")
 button.addEventListener("click", async () => {
     var email = document.getElementById("email")
     var password = document.getElementById("password")
-    console.log(email, password)
-    createUserWithEmailAndPassword(auth, email.text, password.text).then((userCredential) => {
+    createUserWithEmailAndPassword(auth, email.value, password.value).then((userCredential) => {
             // Signed up 
                 const user = userCredential.user;
             // ...
@@ -44,4 +43,4 @@ button.addEventListener("click", async () => {
         }); 
 })
 
-console.log("test")
+
