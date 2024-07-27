@@ -28,8 +28,8 @@ const auth = getAuth();
 var button = document.getElementById("signup_button")
 
 button.addEventListener("click", async () => {
-    email = document.getElementById("email")
-    password = document.getElementById("password")
+    var email = document.getElementById("email")
+    var password = document.getElementById("password")
     console.log(email, password)
     createUserWithEmailAndPassword(auth, email.text, password.text).then((userCredential) => {
             // Signed up 
