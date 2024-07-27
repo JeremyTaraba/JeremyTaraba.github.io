@@ -25,17 +25,7 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth();
 
 
-createUserWithEmailAndPassword(auth, email, password)
-  .then((userCredential) => {
-    // Signed up 
-    const user = userCredential.user;
-    // ...
-  })
-  .catch((error) => {
-    const errorCode = error.code;
-    const errorMessage = error.message;
-    // ..
-  });
+
 
  button = document.getElementById("signup_button")
 
@@ -43,5 +33,14 @@ createUserWithEmailAndPassword(auth, email, password)
     email = document.getElementById("email")
     password = document.getElementById("password")
     console.log(email, password)
-    createUserWithEmailAndPassword(auth, email.text, password.text); 
+    createUserWithEmailAndPassword(auth, email.text, password.text).then((userCredential) => {
+        // Signed up 
+        const user = userCredential.user;
+        // ...
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        // ..
+      }); 
  })
