@@ -1,9 +1,7 @@
 // Import the functions you need from the SDKs you need
-import firebase from "firebase/app"
-import 'firebase/auth'
-import 'firebase/firestore'
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-app.js";
-import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-analytics.js";
+import { initializeApp } from "firebase/app";
+import { getAuth } from "firebase/auth";
+
 
 
 // TODO: Add SDKs for Firebase products that you want to use
@@ -23,26 +21,27 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
-import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-auth.js";
+
 const auth = getAuth();
-createUserWithEmailAndPassword(auth, email, password)
-  .then((userCredential) => {
-    // Signed up 
-    const user = userCredential.user;
-    // ...
-  })
-  .catch((error) => {
-    const errorCode = error.code;
-    const errorMessage = error.message;
-    // ..
-  });
 
- button = document.getElementById("signup_button")
 
- button.addEventListener("click", async () => {
-    email = document.getElementById("email")
-    password = document.getElementById("password")
-    console.log(email, password)
-    createUserWithEmailAndPassword(auth, email.text, password.text); 
- })
+// createUserWithEmailAndPassword(auth, email, password)
+//   .then((userCredential) => {
+//     // Signed up 
+//     const user = userCredential.user;
+//     // ...
+//   })
+//   .catch((error) => {
+//     const errorCode = error.code;
+//     const errorMessage = error.message;
+//     // ..
+//   });
+
+//  button = document.getElementById("signup_button")
+
+//  button.addEventListener("click", async () => {
+//     email = document.getElementById("email")
+//     password = document.getElementById("password")
+//     console.log(email, password)
+//     createUserWithEmailAndPassword(auth, email.text, password.text); 
+//  })
