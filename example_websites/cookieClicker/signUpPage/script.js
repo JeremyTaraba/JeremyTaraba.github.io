@@ -31,7 +31,7 @@ button.addEventListener("click", async () => {
     email = document.getElementById("email")
     password = document.getElementById("password")
     console.log(email, password)
-    createUserWithEmailAndPassword(auth, email.text, password.text).then((userCredential) => {
+    firebase.auth().createUserWithEmailAndPassword(auth, email.text, password.text).then((userCredential) => {
             // Signed up 
                 const user = userCredential.user;
             // ...
@@ -48,7 +48,7 @@ function createUser(){
     email = document.getElementById("email")
     password = document.getElementById("password")
     console.log(email, password)
-    createUserWithEmailAndPassword(auth, email.text, password.text).then((userCredential) => {
+    firebase.auth().createUserWithEmailAndPassword(auth, email.text, password.text).then((userCredential) => {
             // Signed up
                 const user = userCredential.user;
             //...
