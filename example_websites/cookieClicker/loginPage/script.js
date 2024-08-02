@@ -32,7 +32,7 @@ const firebaseConfig = {
     var email = document.getElementById('email');
     var password = document.getElementById('password');
     signInWithEmailAndPassword(auth, email.value, password.value).then(function() {
-        window.location.href = "../gamePage/index.html";
+        window.location.href = "../gamePage";
     })
     .catch(function(error) {
         const errorCode = error.code;
