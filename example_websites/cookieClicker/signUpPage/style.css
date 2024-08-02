@@ -31,8 +31,19 @@ nav{
 }
 
 
-form {
-    display: inline-block;
+.form-group {
+    width: auto;
+    margin-bottom: 10px;
+}
+
+input{
+    border-top-left-radius: 2%;
+    border-top-right-radius: 2%;
+    border-bottom: 2px solid relative;
+}
+
+.form_content_container{
+  
     margin-left: auto;
     margin-right: auto;
 }

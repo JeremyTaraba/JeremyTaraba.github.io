@@ -27,21 +27,39 @@ const auth = getAuth();
 
 var button = document.getElementById("signup_button")
 
-button.addEventListener("click", async () => {
+// button.addEventListener("click", async () => {
+//     var email = document.getElementById("email")
+//     var password = document.getElementById("password")
+//     createUserWithEmailAndPassword(auth, email.value, password.value).then((userCredential) => {
+//             // Signed up 
+//                 const user = userCredential.user;
+//             // ...
+//             window.location.href = "../gamePage/index.html";
+//             })
+//             .catch((error) => {
+//                 const errorCode = error.code;
+//                 const errorMessage = error.message;
+//                 window.location.href = "../errorPage/index.html";
+//             // ..
+//         }); 
+// })
+
+
+function createNewUser(){
     var email = document.getElementById("email")
     var password = document.getElementById("password")
     createUserWithEmailAndPassword(auth, email.value, password.value).then((userCredential) => {
-            // Signed up 
-                const user = userCredential.user;
-            // ...
-            window.location.href = "../gamePage/index.html";
-            })
-            .catch((error) => {
-                const errorCode = error.code;
-                const errorMessage = error.message;
-                window.location.href = "../errorPage/index.html";
-            // ..
-        }); 
-})
+        // Signed up 
+            const user = userCredential.user;
+        // ...
+        window.location.href = "../gamePage/index.html";
+        })
+        .catch((error) => {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            alert(errorMessage, errorCode)
+        // ..
+    }); 
+}
 
 
