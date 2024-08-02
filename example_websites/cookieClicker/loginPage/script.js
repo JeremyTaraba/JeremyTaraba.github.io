@@ -1,3 +1,8 @@
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-app.js";
+import { getAuth, signInWithEmailAndPassword  } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-auth.js";
+
+
+
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -15,9 +20,9 @@ const firebaseConfig = {
   };
   
   // Initialize Firebase
-  const app = firebase.initializeApp(firebaseConfig);
+  const app = initializeApp(firebaseConfig);
   
-  const auth = firebase.getAuth();
+  const auth = getAuth();
 
   login_button = document.getElementById('login_button');
 
@@ -26,7 +31,7 @@ const firebaseConfig = {
   async function login(){
     email = document.getElementById('email');
     password = document.getElementById('password');
-    auth.signInWithEmailAndPassword(email.value, password.value).then(function() {
+    signInWithEmailAndPassword(auth, email.value, password.value).then(function() {
         window.location.href = "../gamePage/index.html";
     })
     .catch(function(error) {
