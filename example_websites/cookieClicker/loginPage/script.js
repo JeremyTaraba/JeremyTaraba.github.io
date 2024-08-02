@@ -19,7 +19,11 @@ const firebaseConfig = {
   
   const auth = firebase.getAuth();
 
-  function login(){
+  login_button = document.getElementById('login_button');
+
+  login_button.addEventListener('click', login);
+
+  async function login(){
     email = document.getElementById('email');
     password = document.getElementById('password');
     auth.signInWithEmailAndPassword(email.value, password.value).then(function() {
