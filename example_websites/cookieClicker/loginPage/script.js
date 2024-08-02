@@ -29,8 +29,8 @@ const firebaseConfig = {
   login_button.addEventListener('click', login);
 
   async function login(){
-    email = document.getElementById('email');
-    password = document.getElementById('password');
+    var email = document.getElementById('email');
+    var password = document.getElementById('password');
     signInWithEmailAndPassword(auth, email.value, password.value).then(function() {
         window.location.href = "../gamePage/index.html";
     })
