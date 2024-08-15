@@ -50,6 +50,19 @@ img{
 
 }
 
+#logout_button{
+    width: auto;
+    text-align: center;
+    margin: auto 20px;
+    padding: 10px 20px;
+    float: right;
+    size: 5rem;
+    display: flex;
+    border-radius: 10px;
+    background-color: #66e3db;
+ 
+}
+
 #current_user_text{
     padding-left: 20px;
     

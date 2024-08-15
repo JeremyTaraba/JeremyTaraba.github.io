@@ -19,6 +19,11 @@ function setCurrentUser() {
     current_user_text.textContent = "Welcome,  " + current_user;
 }
 
+function logout_user(){
+    sessionStorage.removeItem('username');
+    window.location.href = "../landingPage";  // Redirect to home page
+}
+
 
 
 cookie = document.getElementById('cookie');
@@ -26,6 +31,10 @@ cookie = document.getElementById('cookie');
 cookie.addEventListener('click', function() {
     incrementScore();
 });
+
+logout_button = document.getElementById('logout_button');
+
+logout_button.addEventListener('click', logout_user);
 
 updateScore();
 setCurrentUser();
