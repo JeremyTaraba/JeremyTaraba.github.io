@@ -28,11 +28,16 @@ const firebaseConfig = {
 
   login_button.addEventListener('click', login);
 
+  
+
   async function login(){
     var email = document.getElementById('email');
     var password = document.getElementById('password');
-    signInWithEmailAndPassword(auth, email.value, password.value).then(function() {
-        window.location.href = "../gamePage";
+    signInWithEmailAndPassword(auth, email.value, password.value).then(function(userCredentials) {
+        console.log(userCredentials);
+      
+        sessionStorage.setItem('Username',userCredentials.user);
+       // window.location.href = "../gamePage";
     })
     .catch(function(error) {
         const errorCode = error.code;
