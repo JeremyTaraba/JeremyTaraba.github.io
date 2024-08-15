@@ -34,9 +34,8 @@ const firebaseConfig = {
     var email = document.getElementById('email');
     var password = document.getElementById('password');
     signInWithEmailAndPassword(auth, email.value, password.value).then(function(userCredentials) {
-        console.log(userCredentials);
-      
-        sessionStorage.setItem('Username',userCredentials.user);
+        console.log(userCredentials.user.email);
+        sessionStorage.setItem('Username',userCredentials.user.email);
        // window.location.href = "../gamePage";
     })
     .catch(function(error) {

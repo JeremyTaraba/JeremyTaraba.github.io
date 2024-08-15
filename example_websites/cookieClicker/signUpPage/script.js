@@ -39,7 +39,6 @@ button.addEventListener("click", async () => {
                 const errorCode = error.code;
                 const errorMessage = error.message;
                 alert(errorCode, errorMessage)
-            
         }); 
 })
 

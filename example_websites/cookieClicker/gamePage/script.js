@@ -1,7 +1,7 @@
 score_total = 0;
 score_text = document.getElementById('score_text');
 current_user_text = document.getElementById('current_user_text');
-current_user = "";
+current_user = "blank";
 
 function updateScore(){
     // get real score from database
@@ -15,7 +15,7 @@ function incrementScore() {
 }
 
 function setCurrentUser() {
-    current_user = "blank"; // get user from database
+    current_user = sessionStorage.getItem('username'); // get username
     current_user_text.textContent = "Welcome,  " + current_user;
 }
 
