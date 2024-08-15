@@ -1,7 +1,7 @@
-score_total = 0;
-score_text = document.getElementById('score_text');
-current_user_text = document.getElementById('current_user_text');
-current_user = "blank";
+var score_total = 0;
+var score_text = document.getElementById('score_text');
+var current_user_text = document.getElementById('current_user_text');
+var current_user = "blank";
 
 function updateScore(){
     // get real score from database
@@ -26,13 +26,13 @@ function logout_user(){
 
 
 
-cookie = document.getElementById('cookie');
+var cookie = document.getElementById('cookie');
 
 cookie.addEventListener('click', function() {
     incrementScore();
 });
 
-logout_button = document.getElementById('logout_button');
+var logout_button = document.getElementById('logout_button');
 
 logout_button.addEventListener('click', logout_user);
 
