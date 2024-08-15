@@ -32,15 +32,14 @@ button.addEventListener("click", async () => {
     var password = document.getElementById("password")
     createUserWithEmailAndPassword(auth, email.value, password.value).then((userCredential) => {
             // Signed up 
-                const user = userCredential.user;
-            // ...
-            window.location.href = "../gamePage/index.html";
+            const user = userCredential.user;
+            window.location.href = "../gamePage";
             })
             .catch((error) => {
                 const errorCode = error.code;
                 const errorMessage = error.message;
-                window.location.href = "../errorPage/index.html";
-            // ..
+                alert(errorCode, errorMessage)
+            
         }); 
 })
 
