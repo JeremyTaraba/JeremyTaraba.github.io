@@ -1,5 +1,5 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13/firebase-app.js";
-import { getFirestore } from "https://www.gstatic.com/firebasejs/10.13/firebase-firestore.js";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-app.js";
+import { getFirestore, collection, addDoc, setDoc, doc } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-firestore.js";
 
 
 // Your web app's Firebase configuration
@@ -67,19 +67,14 @@ setCurrentUser();
 
 
 
-// try {
-//     const docRef = await addDoc(collection(db, "users"), {
-//       first: "Ada",
-//       last: "Lovelace",
-//       born: 1815
-//     });
-//     console.log("Document written with ID: ", docRef.id);
-//   } catch (e) {
-//     console.error("Error adding document: ", e);
-//   }
+try {
+    const docRef = await setDoc(doc(db, "users", "Ada"), {
+      first: "Ada",
+      last: "Lovelace",
+      born: 1815
+    });
+    
+  } catch (e) {
+    console.error("Error adding document: ", e);
+  }
 
-  db.collection("score").doc("testing").set({
-    name: "Los Angeles",
-    state: "CA",
-    country: "USA"
-})
