@@ -17,12 +17,12 @@ function incrementScore() {
 function setCurrentUser() {
     current_user = sessionStorage.getItem('username'); // get username
     var username = "";
-    for (char in current_user.characters){
-        if (char == '@'){
+    for (let i = 0; i < current_user.length; i++) {
+        if (current_user[i]== '@') { // ignore the dot at the end of email address
             break;
         }
-        username += char;
-    }
+        username += current_user[i];
+      }
     current_user_text.textContent = "Welcome,  " + username;
 }
 
