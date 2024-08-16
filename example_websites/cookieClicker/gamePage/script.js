@@ -1,3 +1,26 @@
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13/firebase-app.js";
+import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/10.13/firebase-firestore.js";
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+    apiKey: "AIzaSyANEFOuK92IBNEVcIVGW9LfAJsiBWG6sog",
+    authDomain: "cookieclicker-72b05.firebaseapp.com",
+    projectId: "cookieclicker-72b05",
+    storageBucket: "cookieclicker-72b05.appspot.com",
+    messagingSenderId: "766996351721",
+    appId: "1:766996351721:web:05e35fc69cdd19d434fe78",
+    measurementId: "G-24ZMJNCH1R"
+  };
+
+  // Initialize Firebase
+const app = initializeApp(firebaseConfig);
+
+
+// Initialize Cloud Firestore and get a reference to the service
+const db = getFirestore(app);
+
+
 var score_total = 0;
 var score_text = document.getElementById('score_text');
 var current_user_text = document.getElementById('current_user_text');
@@ -41,3 +64,16 @@ logout_button.addEventListener('click', logout_user);
 
 updateScore();
 setCurrentUser();
+
+
+
+try {
+    const docRef = await addDoc(collection(db, "users"), {
+      first: "Ada",
+      last: "Lovelace",
+      born: 1815
+    });
+    console.log("Document written with ID: ", docRef.id);
+  } catch (e) {
+    console.error("Error adding document: ", e);
+  }
