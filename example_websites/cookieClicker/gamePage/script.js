@@ -16,7 +16,14 @@ function incrementScore() {
 
 function setCurrentUser() {
     current_user = sessionStorage.getItem('username'); // get username
-    current_user_text.textContent = "Welcome,  " + current_user;
+    var username = "";
+    for (char in current_user.characters){
+        if (char == '@'){
+            break;
+        }
+        username += char;
+    }
+    current_user_text.textContent = "Welcome,  " + username;
 }
 
 function logout_user(){
@@ -25,12 +32,12 @@ function logout_user(){
 }
 
 var cookie = document.getElementById('cookie');
-
 var logout_button = document.getElementById('logout_button');
 
-cookie.addEventListener('click', incrementScore);
 
+cookie.addEventListener('click', incrementScore);
 logout_button.addEventListener('click', logout_user);
+
 
 updateScore();
 setCurrentUser();
