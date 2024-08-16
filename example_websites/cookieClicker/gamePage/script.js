@@ -24,8 +24,6 @@ function logout_user(){
     window.location.href = "../landingPage";  // Redirect to home page
 }
 
-
-
 var cookie = document.getElementById('cookie');
 
 var logout_button = document.getElementById('logout_button');
