@@ -77,3 +77,9 @@ try {
   } catch (e) {
     console.error("Error adding document: ", e);
   }
+
+  db.collection("score").doc("testing").set({
+    name: "Los Angeles",
+    state: "CA",
+    country: "USA"
+})
