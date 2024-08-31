@@ -33,6 +33,7 @@ button.addEventListener("click", async () => {
     createUserWithEmailAndPassword(auth, email.value, password.value).then((userCredential) => {
             // Signed up 
             const user = userCredential.user;
+            sessionStorage.setItem('username',userCredentials.user.email);
             window.location.href = "../gamePage";
             })
             .catch((error) => {

@@ -69,3 +69,32 @@ img{
     display: inline;
     margin-right: auto;
 }
+
+
+#high_scores_container{
+    justify-content: space-between;
+    border-bottom: 1px solid #eee;
+    margin: 100px 20%;
+    padding: 20px 20px;
+    background-color: rgb(245, 202, 85);
+    align-items: center;
+    border-radius: 12px;
+}
+
+#high_scores_container h3{
+    text-align: center;
+    align-items: center;
+}
+
+.center {
+    text-align: center;
+    list-style-position: inside;
+  }
+
+ol{
+    display: flex;
+}
+
+li{
+    flex-grow: 1;
+}

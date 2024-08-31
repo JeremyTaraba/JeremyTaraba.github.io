@@ -1,5 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-app.js";
-import { getFirestore, collection, addDoc, setDoc, doc } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-firestore.js";
+import { getFirestore, collection, addDoc, setDoc, doc, getDoc } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-firestore.js";
 
 
 // Your web app's Firebase configuration
@@ -26,15 +26,43 @@ var score_text = document.getElementById('score_text');
 var current_user_text = document.getElementById('current_user_text');
 var current_user = "blank";
 
-function updateScore(){
+async function updateScore(){
     // get real score from database
+    let score = await getScore()
+    score_total = score;
     score_text.textContent = "Score: " + score_total;
 }
+
+function debounce(func, timeout = 1000){
+  let timer;
+  return (...args) => {
+    clearTimeout(timer);
+    timer = setTimeout(() => { func.apply(this, args); }, timeout);
+  };
+}
+
+const processChange = debounce(updateFirebaseScore);
+
+
 
 
 function incrementScore() {
     score_total += 1;
     score_text.textContent = "Score: " + score_total;
+    // updateFirebaseScore(score_total)
+}
+
+
+
+async function getScore(){
+  const docRef = doc(db, "scores", sessionStorage.getItem('username'));
+  const docSnap = await getDoc(docRef);
+  if (docSnap.exists()) {
+    return docSnap.data().score;
+  } else {
+    // docSnap.data() will be undefined in this case
+    console.log("No such document!");
+  }
 }
 
 function setCurrentUser() {
@@ -54,6 +82,12 @@ function logout_user(){
     window.location.href = "../landingPage";  // Redirect to home page
 }
 
+async function updateFirebaseScore(score){
+  // update firebase score
+  console.log(`update firebase score: ${score}`);
+  await setDoc(doc(db, "scores", current_user), { score: score });  // update the user's score in Firestore
+}
+
 var cookie = document.getElementById('cookie');
 var logout_button = document.getElementById('logout_button');
 
@@ -61,20 +95,14 @@ var logout_button = document.getElementById('logout_button');
 cookie.addEventListener('click', incrementScore);
 logout_button.addEventListener('click', logout_user);
 
+cookie.addEventListener('click', () => processChange(score_total));
+
+var scoreboard = document.getElementById('high_scores_list');
+scoreboard.innerHTML += `<li>Item 100</li>`
+// this doesnt change it because we have to update it and replace it not just add to it
 
 updateScore();
 setCurrentUser();
 
 
-
-try {
-    const docRef = await setDoc(doc(db, "users", "Ada"), {
-      first: "Ada",
-      last: "Lovelace",
-      born: 1815
-    });
-    
-  } catch (e) {
-    console.error("Error adding document: ", e);
-  }
 
