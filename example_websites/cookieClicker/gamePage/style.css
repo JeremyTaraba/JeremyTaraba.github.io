@@ -98,19 +98,25 @@ img{
     margin: 10px 20%;
     padding: 20px 20px;
     background-color: rgb(245, 202, 85);
-    align-items: center;
+    align-items: left;
     border-radius: 12px;
+    text-align: left;
 } 
 
 #high_scores_container h3{
     text-align: center;
     align-items: left;
+    overflow: hidden;
 }
+
 
 .high_scores_text{
-    padding: 8px 8px;
+    width: 100px;
 }
 
+.high_scores_number {
+    flex-grow: 1;
+}
 
 
 .center {
@@ -118,10 +124,9 @@ img{
     list-style-position: inside;
   }
 
-ol{
-    display: flex;
-}
 
 li{
-    flex-grow: 1;
+    display: flex;
+    overflow: hidden;
+    padding: 3px;
 }

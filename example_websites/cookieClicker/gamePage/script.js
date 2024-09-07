@@ -29,8 +29,15 @@ var current_user = "blank";
 async function updateScore(){
     // get real score from database
     let score = await getScore()
-    score_total = score;
-    score_text.textContent = "Score: " + score_total;
+    if(score){
+      score_total = score;
+      score_text.textContent = "Score: " + score_total;
+    }
+    else{
+      score_total = 0;
+      score_text.textContent = "Score: " + score_total;
+    }
+    
 }
 
 function debounce(func, timeout = 1000){
@@ -62,6 +69,9 @@ async function getScore(){
   } else {
     // docSnap.data() will be undefined in this case
     console.log("No such document!");
+    // create a new document
+    await setDoc(docRef, { score: 0 });
+    
   }
 }
 
@@ -98,25 +108,25 @@ logout_button.addEventListener('click', logout_user);
 cookie.addEventListener('click', () => processChange(score_total));
 
 var scoreboard = document.getElementById('high_scores_list');
-scoreboard.innerHTML += `<li>Item 100</li>`
 
 async function getScoreboard(){
   scoreboard.innerHTML = "";
   const querySnapshot = await getDocs(collection(db, "scores"));
-  var sortedScores = {};
+  var sortedScores = [];
   querySnapshot.forEach((doc) => {
     sortedScores.push({id: doc.id, score: doc.data()["score"]});
   });
+
+
+  //TODO: They have most of it, just not the sorting scores part.
+  //TODO: after that they have to update the scoreboard whenever a user enters a new score
+  //TODO: once they are done, have them make a new user and test everything out 
+
   sortedScores.sort((a, b) => b.score - a.score);
+  for(let i = 0; i < sortedScores.length && i < 5; i++){
+    scoreboard.innerHTML += `<li><div class="high_scores_text">${i+1}. ${sortedScores[i].id.split('@')[0]}</div><div>${sortedScores[i].score}</div></li>`
+  }
 
-
-  querySnapshot.forEach((doc) => {
-    // doc.data() is never undefined for query doc snapshots
-    console.log(doc.id, " => ", doc.data()["score"]);
-    scoreboard.innerHTML += `<li><div class="high_scores_text">${doc.id.split('@')[0]}</div><div>${doc.data()["score"]}</div></li>`
-  });
-  
-  
   
 }
 
