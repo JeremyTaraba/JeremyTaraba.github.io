@@ -1,5 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-app.js";
-import { getFirestore, collection, addDoc, setDoc, doc, getDoc } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-firestore.js";
+import { getFirestore, collection, addDoc, setDoc, doc, getDoc, getDocs } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-firestore.js";
 
 
 // Your web app's Firebase configuration
@@ -99,7 +99,28 @@ cookie.addEventListener('click', () => processChange(score_total));
 
 var scoreboard = document.getElementById('high_scores_list');
 scoreboard.innerHTML += `<li>Item 100</li>`
-// this doesnt change it because we have to update it and replace it not just add to it
+
+async function getScoreboard(){
+  scoreboard.innerHTML = "";
+  const querySnapshot = await getDocs(collection(db, "scores"));
+  var sortedScores = {};
+  querySnapshot.forEach((doc) => {
+    sortedScores.push({id: doc.id, score: doc.data()["score"]});
+  });
+  sortedScores.sort((a, b) => b.score - a.score);
+
+
+  querySnapshot.forEach((doc) => {
+    // doc.data() is never undefined for query doc snapshots
+    console.log(doc.id, " => ", doc.data()["score"]);
+    scoreboard.innerHTML += `<li><div class="high_scores_text">${doc.id.split('@')[0]}</div><div>${doc.data()["score"]}</div></li>`
+  });
+  
+  
+  
+}
+
+await getScoreboard();
 
 updateScore();
 setCurrentUser();
