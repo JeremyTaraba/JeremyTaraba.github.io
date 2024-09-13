@@ -119,7 +119,6 @@ async function getScoreboard(){
 
 
   //TODO: They have most of it, just not the sorting scores part.
-  //TODO: after that they have to update the scoreboard whenever a user enters a new score
   //TODO: once they are done, have them make a new user and test everything out 
 
   sortedScores.sort((a, b) => b.score - a.score);
@@ -127,13 +126,9 @@ async function getScoreboard(){
     scoreboard.innerHTML += `<li><div class="high_scores_text">${i+1}. ${sortedScores[i].id.split('@')[0]}</div><div>${sortedScores[i].score}</div></li>`
   }
 
-  
 }
 
 await getScoreboard();
 
 updateScore();
 setCurrentUser();
-
-
-
