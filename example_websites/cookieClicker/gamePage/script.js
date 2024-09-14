@@ -71,7 +71,7 @@ async function getScore(){
     console.log("No such document!");
     // create a new document
     await setDoc(docRef, { score: 0 });
-    
+    return 0;
   }
 }
 
@@ -108,6 +108,8 @@ logout_button.addEventListener('click', logout_user);
 cookie.addEventListener('click', () => processChange(score_total));
 
 var scoreboard = document.getElementById('high_scores_list');
+
+
 
 async function getScoreboard(){
   scoreboard.innerHTML = "";
