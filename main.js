@@ -34,7 +34,7 @@ function showPage() {
     $(window).scroll(function () {
       var currentScroll = $(this).scrollTop();
       if (currentScroll < 100) {
-        showTopNav();
+        showNav();
       } else if (currentScroll > 0 && currentScroll < $(document).height() - $(window).height()) {
         if (currentScroll > previousScroll) {
           hideNav();
