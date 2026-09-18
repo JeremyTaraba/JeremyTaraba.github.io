@@ -97,7 +97,7 @@ body {
 }
 
 .logo {
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 800;
     display: flex;
     align-items: center;
@@ -108,8 +108,8 @@ body {
 
 /* --- Custom Frog Image Logo --- */
 .frog-img {
-    width: 32px;  /* Adjust this number to make it larger or smaller */
-    height: 32px;
+    width: 56px;  /* Adjust this number to make it larger or smaller */
+    height: 56px;
     object-fit: contain; /* Prevents the image from stretching */
     display: block; /* Works perfectly with your existing flexbox gap */
 }
@@ -238,39 +238,32 @@ body {
     flex-wrap: wrap;
 }
 
-.btn-solid-android, .btn-glass-ios {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    padding: 1rem 2rem;
-    border-radius: 12px;
-    font-size: 1rem;
-    font-weight: 700;
-    text-decoration: none;
-    transition: all 0.3s ease;
+/* --- Store Badges --- */
+.store-badge {
+    display: inline-block;
+    transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s ease;
+    border-radius: 8px; /* Smooth corners for the hover shadow */
 }
 
-.btn-solid-android .icon, .btn-glass-ios .icon { width: 22px; height: 22px; }
-
-.btn-solid-android {
-    background-color: #2eb872;
-    color: white;
-    box-shadow: 0 10px 20px rgba(46, 184, 114, 0.25);
+.store-badge:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
-.btn-solid-android:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 12px 25px rgba(46, 184, 114, 0.35);
+.disabled-badge {
+    opacity: 0.5;
+    filter: grayscale(100%);
+    cursor: not-allowed;
+    pointer-events: none; /* Prevents clicking entirely */
 }
 
-.btn-glass-ios {
-    background: rgba(255, 255, 255, 0.65);
-    border: 1px solid rgba(255, 255, 255, 0.9);
-    color: var(--text-muted);
+/* --- Store Badge Images --- */
+.badge-img {
+    height: 50px; /* Adjust this slightly if one looks bigger than the other */
+    width: auto;
+    display: block;
+    object-fit: contain;
 }
-
-.btn-glass-ios.disabled { cursor: not-allowed; }
 
 /* Social Proof */
 .social-proof {
@@ -285,32 +278,48 @@ body {
 
 .avatars { display: flex; }
 .avatar {
-    width: 32px; height: 32px; border-radius: 50%; border: 2px solid white;
-    margin-left: -10px; display: flex; align-items: center; justify-content: center;
-    font-size: 0.7rem; font-weight: 800; color: var(--text-main);
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 2px solid white;
+    margin-left: -10px;
+    
+    /* These three lines make images fit the circle perfectly */
+    display: block;
+    object-fit: cover;
+    background-color: #fff; /* fallback background */
 }
-.avatar:first-child { margin-left: 0; background: #c6f6d5; }
-.avatar:nth-child(2) { background: #bee3f8; }
-.avatar:nth-child(3) { background: #fed7e2; }
+.avatar:first-child { 
+    margin-left: 0; 
+}
+
 
 /* Large Centered Phone Mockup */
 .phone-mockup-large {
-    width: 340px; height: 680px; border-radius: 45px;
-    background: linear-gradient(180deg, #93C5FD, #E0F2FE);
-    border: 12px solid white; box-shadow: 0 30px 60px rgba(0, 0, 0, 0.12);
-    position: relative; overflow: hidden; margin-top: 1rem;
+    width: 340px; 
+    height: auto; /* Replaced the fixed 680px height */
+    border-radius: 45px;
+    background: rgb(68, 68, 68); /* Changed from gradient to white fallback */
+    border: 12px solid rgb(68, 68, 68);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.12);
+    position: relative;
+    overflow: hidden;
+    margin-top: 1rem;
 }
 
-.phone-mockup-large::before {
-    content: ''; position: absolute; top: 0; left: 50%; transform: translateX(-50%);
-    width: 140px; height: 25px; background: white; border-radius: 0 0 16px 16px;
+/* Optional: Add a small notch or speaker area at the top of the mockup */
+/* .phone-mockup-large::before {
+    content: ''; position: absolute; top: 5px; left: 50%; transform: translateX(-50%);
+    width: 20px; height: 20px; background: rgb(68, 68, 68); border-radius: 16px 16px 16px 16px;
+} */
+
+/* --- App Screenshot inside the Mockup --- */
+.mockup-img {
+    width: 100%;
+    height: auto; /* Replaced 100% height */
+    display: block;
+    border-radius: 33px; /* 45px outer radius minus 12px border = perfect inner radius */
 }
-
-.mockup-ui { padding: 3rem 1.5rem; color: white; display: flex; flex-direction: column; align-items: center; height: 100%; }
-.mockup-header { display: flex; justify-content: space-between; width: 100%; font-weight: 700; font-size: 1.1rem; margin-bottom: 3rem; }
-.mockup-temp { font-size: 5.5rem; font-weight: 800; line-height: 1; margin-bottom: 0.5rem; text-shadow: 0 4px 10px rgba(0,0,0,0.1); }
-.mockup-desc { text-align: center; font-size: 1.1rem; font-weight: 600; line-height: 1.4; opacity: 0.9; }
-
 .floating { animation: float 6s ease-in-out infinite; }
 
 @keyframes float {
@@ -322,10 +331,10 @@ body {
 /* --- Features & Gallery Section --- */
 .features-combined {
     display: flex; flex-direction: column; align-items: center;
-    padding-top: 5rem; width: 100%;
+    padding-top: 3rem; width: 100%;
 }
 
-.splash-header { text-align: center; max-width: 700px; margin: 0 auto 4rem auto; }
+.splash-header { text-align: center; max-width: 700px; margin: 0 auto 3rem auto; }
 .splash-header h2 { font-size: 2.5rem; font-weight: 800; color: #1a202c; margin-bottom: 1rem; }
 .splash-header p { font-size: 1.15rem; color: var(--text-muted); line-height: 1.6; }
 
@@ -355,21 +364,39 @@ body {
 
 .gallery-title {
     display: inline-block; padding: 1rem 3rem; border-radius: 50px;
-    margin: 0 auto 4rem auto; text-align: center;
+    margin: 0 auto 4rem auto; text-align: center; font-size: 2rem; font-weight: 800; color: #1a202c;
 }
 
 .gallery-grid { display: flex; justify-content: center; gap: 3rem; flex-wrap: wrap; width: 100%; }
 
+/* Update base mockup to remove fixed height and flex centering */
 .phone-mockup {
-    width: 320px; height: 650px; border-radius: 40px; border: 8px solid rgba(255, 255, 255, 0.8);
-    display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden;
+    width: 320px; 
+    height: auto; /* Changed from fixed 650px */
+    border-radius: 40px; 
+    border: 8px solid rgb(68, 68, 68);;
+    position: relative; 
+    overflow: hidden;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
 }
-.phone-mockup.mini { width: 260px; height: 540px; border-radius: 36px; }
-.phone-mockup::before {
+
+/* Update mini mockup to remove fixed height */
+.phone-mockup.mini { 
+    width: 260px; 
+    height: auto; /* Changed from fixed 540px */
+    border-radius: 36px; 
+}
+
+/* New rule specifically for the images inside the gallery mockups */
+.gallery-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+/* .phone-mockup::before {
     content: ''; position: absolute; top: 0; width: 150px; height: 25px;
     background: rgba(255, 255, 255, 0.8); border-radius: 0 0 20px 20px;
-}
+} */
 .screen-content { font-weight: 800; color: var(--text-muted); opacity: 0.5; }
 
 
@@ -395,7 +422,7 @@ body {
 
 /* --- Story & Quote Section --- */
 .story-section { display: flex; flex-direction: column; align-items: center; padding-top: 2rem; margin-bottom: 5rem; }
-.story-header { display: flex; flex-direction: column; align-items: center; margin-bottom: 2.5rem; }
+.story-header { display: flex; flex-direction: column; align-items: center; margin-bottom: 2rem; }
 .story-header h2 { font-size: 2.8rem; font-weight: 800; color: #1a202c; margin: 0; }
 
 .heart-icon {
