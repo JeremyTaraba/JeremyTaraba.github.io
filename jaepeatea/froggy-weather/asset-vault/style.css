@@ -1,0 +1,539 @@
+:root {
+    /* Color Palette */
+    --bg-neutral: #f4f7f6;
+    --text-main: #2c3e50;
+    --text-muted: #596b7d;
+    --pastel-green: #a8e6cf;
+    --pastel-peach: #ffd3b6;
+    --pastel-pink: #ffaaa5;
+    
+    /* Frosted Glass Properties */
+    --glass-bg: rgba(255, 255, 255, 0.55);
+    --glass-border: rgba(255, 255, 255, 0.8);
+    --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.05);
+    --glass-blur: blur(16px);
+}
+
+/* --- Base & Resets --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: var(--bg-neutral);
+    color: var(--text-main);
+    line-height: 1.6;
+    overflow-x: hidden;
+    position: relative;
+    min-height: 100vh;
+}
+
+.section-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+}
+
+.glass-panel {
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow);
+}
+
+/* --- Dynamic Pastel Background --- */
+.blob {
+    position: fixed;
+    border-radius: 50%;
+    filter: blur(80px);
+    z-index: -1;
+    opacity: 0.7;
+    animation: float-blob 20s infinite alternate ease-in-out;
+}
+
+.blob-1 { top: -10%; left: -10%; width: 50vw; height: 50vw; background: var(--pastel-green); }
+.blob-2 { top: 40%; right: -10%; width: 40vw; height: 40vw; background: var(--pastel-peach); animation-delay: -5s; }
+.blob-3 { bottom: -20%; left: 20%; width: 60vw; height: 40vw; background: var(--pastel-pink); animation-delay: -10s; }
+
+@keyframes float-blob {
+    0% { transform: translate(0, 0) scale(1); }
+    100% { transform: translate(50px, 50px) scale(1.1); }
+}
+
+/* --- Navigation --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 1.5rem 0.8rem 2rem;
+    border-radius: 50px;
+    width: 90%;
+    max-width: 1000px;
+    margin: 1.5rem auto;
+    position: sticky;
+    top: 1.5rem;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-main);
+}
+
+.btn-nav {
+    display: inline-flex;
+    padding: 0.6rem 1.5rem;
+    font-size: 0.95rem;
+    font-weight: 800;
+    text-decoration: none;
+    border-radius: 50px;
+    background-color: var(--pastel-green);
+    color: var(--text-main);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-nav:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(168, 230, 207, 0.6);
+}
+
+/* --- Header Section --- */
+.vault-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 5rem;
+    padding-bottom: 2rem;
+}
+
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.4rem 1rem;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #3b82f6;
+    margin-bottom: 2rem;
+}
+
+.status-dot {
+    width: 10px;
+    height: 10px;
+    background-color: #3b82f6;
+    border-radius: 50%;
+    animation: pulse-dot 2s infinite; 
+}
+
+
+@keyframes pulse-dot {
+    0% { box-shadow: 0 0 0 0 rgba(62, 131, 221, 0.7); }
+    70% { box-shadow: 0 0 0 8px rgba(46, 184, 114, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(46, 184, 114, 0); }
+}
+
+.vault-header h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: #2c3e50;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.highlight {
+    background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.vault-header .subtitle {
+    font-size: 1.15rem;
+    color: var(--text-muted);
+    max-width: 700px;
+}
+
+/* --- Asset Packs & Gallery Grid --- */
+.pack-section {
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+}
+
+.pack-header {
+    border-radius: 24px;
+    padding: 2.5rem 3rem;
+    margin-bottom: 3rem;
+    text-align: left;
+}
+
+.pack-header h2 {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #1a202c;
+    margin-bottom: 0.5rem;
+}
+
+.pack-header p {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+}
+
+.section-header {
+    border-radius: 24px;
+    padding: 1rem 0.5rem;
+    margin-bottom: 3rem;
+    text-align: left;
+}
+
+.section-header h2 {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #1a202c;
+    margin-bottom: 0.5rem;
+}
+
+.section-header p {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+}
+
+.asset-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+}
+
+.asset-card {
+    border-radius: 28px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.asset-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.08);
+}
+
+.asset-image-container {
+    width: 100%;
+    height: 250px;
+    background: rgba(255, 255, 255, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.asset-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Use 'contain' instead of 'cover' if you don't want character sheets to crop */
+}
+
+/* Fallback for empty image tags until you upload your assets */
+.asset-img[src=""]::before, 
+.asset-img:not([src])::before {
+    content: "Image Placeholder";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.05);
+    color: var(--text-muted);
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.asset-info {
+    padding: 1.5rem 2rem;
+}
+
+.asset-info h3 {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #1a202c;
+    margin-bottom: 0.5rem;
+}
+
+.asset-info p {
+    font-size: 1rem;
+    color: var(--text-muted);
+    margin: 0;
+}
+
+.frog-img {
+    width: 56px;  /* Adjust this number to make it larger or smaller */
+    height: 56px;
+    object-fit: contain; /* Prevents the image from stretching */
+    display: block; /* Works perfectly with your existing flexbox gap */
+}
+
+
+/* --- Site Footer --- */
+.site-footer {
+    width: 100%; margin-top: 4rem; padding: 3rem 5% 2rem;
+    background: rgba(255, 255, 255, 0.45); border-top: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 40px 40px 0 0; box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.02);
+}
+
+.footer-content { max-width: 1100px; margin: 0 auto; }
+.footer-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 2.5rem; }
+.footer-brand { font-size: 1.4rem; font-weight: 800; color: #1a202c; display: flex; align-items: center; gap: 0.6rem; }
+.social-links { display: flex; gap: 1.5rem; }
+.social-links a { color: #64748b; transition: color 0.3s ease, transform 0.3s ease; display: flex; }
+.social-links a:hover { color: #1a202c; transform: translateY(-2px); }
+.footer-divider { border: 0; height: 1px; background: rgba(0, 0, 0, 0.06); margin-bottom: 2rem; width: 100%; }
+.footer-bottom { display: flex; justify-content: space-between; align-items: center; color: #64748b; font-size: 0.95rem; font-weight: 500; }
+.footer-bottom p { margin: 0; color: #64748b; }
+.footer-links { display: flex; gap: 2rem; }
+.footer-links a { color: #64748b; text-decoration: none; transition: color 0.3s ease; }
+.footer-links a:hover { color: #1a202c; }
+
+/* --- Animations --- */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.fade-in.delay-1 {
+    transition-delay: 0.2s;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+    .vault-header h1 { font-size: 2.5rem; }
+    .pack-header { padding: 2rem; }
+    .footer-bottom { flex-direction: column; gap: 1rem; text-align: center; }
+    /* Add this inside your existing max-width: 768px block */
+    .pack-title-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+    .site-footer { padding: 3rem 1.5rem 2rem; }
+    .footer-top, .footer-bottom { flex-direction: column; gap: 1.5rem; text-align: center; }
+    .footer-links { flex-wrap: wrap; justify-content: center; gap: 1rem; }
+
+}
+
+/* Layout for the title and the tag side-by-side */
+.pack-title-row {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.pack-header h2 {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #1a202c;
+    margin: 0; /* Margin moved to the row wrapper */
+}
+
+/* --- AI Generated Badge --- */
+.ai-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.3rem 0.8rem;
+    border-radius: 50px;
+    background: linear-gradient(135deg, #c4b5fd, #8b5cf6); /* Soft to vibrant pastel purple */
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3);
+}
+
+/* --- Horizontal Scrolling Wrapper --- */
+.scroll-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    padding-bottom: 1.5rem; /* Breathing room for the scrollbar */
+    scrollbar-width: thin;
+}
+
+/* Custom Webkit Scrollbar for the horizontal row */
+.scroll-wrapper::-webkit-scrollbar {
+    height: 8px;
+}
+.scroll-wrapper::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+}
+.scroll-wrapper::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+}
+
+/* --- 4-Column Grid (Character Sheets) --- */
+.asset-grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    min-width: 900px; /* Forces horizontal scrolling below this screen size */
+}
+
+.asset-grid-4 .asset-image-container {
+    height: 320px; /* Taller boxes to comfortably fit vertical character sheets */
+}
+
+/* --- 8-Column Grid (Background Packs) --- */
+.asset-grid-8 {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 1rem;
+    min-width: 1300px; /* Forces horizontal scrolling below this screen size */
+}
+
+/* Shrink the contents of the 8-grid so they fit nicely */
+.asset-grid-8 .asset-image-container {
+    height: 250px; 
+}
+
+.asset-grid-8 .asset-info {
+    padding: 1rem;
+}
+
+.asset-grid-8 .asset-info h3 {
+    font-size: 0.95rem;
+    margin-bottom: 0.2rem;
+}
+
+.asset-grid-8 .asset-info p {
+    font-size: 0.8rem;
+}
+/* --- Image Hover Effects --- */
+.asset-img {
+    cursor: pointer;
+    transition: transform 0.4s ease;
+}
+
+.asset-image-container:hover .asset-img {
+    transform: scale(1.05); /* Slight zoom on hover to indicate clickability */
+}
+
+/* --- Image Lightbox Modal --- */
+.image-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(15, 23, 42, 0.7); /* Darker overlay */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.image-modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.image-modal-content {
+    max-width: 90vw;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 16px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+    transform: scale(0.95);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.image-modal-overlay.active .image-modal-content {
+    transform: scale(1);
+}
+
+.close-image-modal {
+    position: absolute;
+    top: 2rem;
+    right: 3rem;
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 2.5rem;
+    line-height: 1;
+    color: white;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2001;
+}
+
+.close-image-modal:hover {
+    background: rgba(0, 0, 0, 0.9);
+    transform: scale(1.1);
+}
+
+/* Responsive adjustment for the close button */
+@media (max-width: 768px) {
+    .close-image-modal {
+        top: 1rem;
+        right: 1rem;
+        width: 40px;
+        height: 40px;
+        font-size: 2rem;
+    }
+}
+
+/* --- 6-Column Grid (Clean Backgrounds) --- */
+.asset-grid-6 {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1.25rem;
+    min-width: 1100px; /* Forces horizontal scrolling below this screen size */
+}
+
+.asset-grid-6 .asset-image-container {
+    height: 250px; 
+}
+
+.asset-grid-6 .asset-info {
+    padding: 1.2rem;
+}
+
+.asset-grid-6 .asset-info h3 {
+    font-size: 1.05rem;
+    margin-bottom: 0.2rem;
+}
+
+.asset-grid-6 .asset-info p {
+    font-size: 0.85rem;
+}
